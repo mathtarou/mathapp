@@ -235,9 +235,10 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 .log-card-date{font-size:11px;color:var(--text3);font-weight:500}
 .log-time-bar{height:4px;border-radius:2px;background:var(--accent);opacity:.35;margin-top:4px}
 .log-card-wrap{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-.lib-card-wrap{position:relative;overflow:hidden;margin-bottom:8px;border-radius:var(--r)}
-.lib-card-inner{transition:transform .2s ease}
-.lib-card-inner>.card{border-radius:0;margin-bottom:0}
+.lib-card-wrap{position:relative;overflow:hidden;margin-bottom:10px;border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow)}
+.lib-card-inner{transition:transform .2s ease;background:var(--bg2);border-radius:var(--r)}
+.lib-card-inner>.card{border-radius:0;margin-bottom:0;border:none;box-shadow:none}
+.lib-card-wrap.highlight-wrap{border-color:var(--danger)!important;border-width:1.5px!important}
 .lib-card-delete{position:absolute;right:0;top:0;bottom:0;width:72px;background:var(--danger);display:flex;align-items:center;justify-content:center;transform:translateX(100%);transition:transform .2s ease;cursor:pointer;flex-direction:column;gap:4px}
 .lib-card-delete svg{color:#fff}
 .lib-card-delete span{font-size:10px;color:#fff;font-weight:600}
@@ -965,28 +966,61 @@ function setWishCoverImg(bid, url){
   img.onerror=function(){this.style.display='none';};
   el.parentNode.replaceChild(img,el);
 }
-// Google Books Dynamic Links APIで書影URLを取得（JSONPのため確実に動作）
+// Google Books volumes APIでISBN完全一致検索して書影取得
 function fetchCoverForWishCard(b){
   if(!b.isbn)return;
-  var cbName='gbsCb_'+b.id;
-  window[cbName]=function(data){
-    try{
-      var info=data['ISBN:'+b.isbn]||data[b.isbn];
-      if(info&&info.thumbnail_url){
-        setWishCoverImg(b.id, info.thumbnail_url);
-        // dbのキャッシュにも保存
-        b.cover=info.thumbnail_url.replace('http://','https://');
-      }
-    }catch(e){}
-    delete window[cbName];
-    var s=document.getElementById('gbs-script-'+b.id);
-    if(s)s.parentNode.removeChild(s);
-  };
-  var script=document.createElement('script');
-  script.id='gbs-script-'+b.id;
-  script.src='https://books.google.com/books?bibkeys=ISBN:'+b.isbn+'&jscmd=viewapi&callback='+cbName;
-  script.onerror=function(){delete window[cbName];};
-  document.head.appendChild(script);
+  // まずOpenBD（日本語書籍に有効）
+  var lang=b.lang||'ja';
+  if(lang==='ja'){
+    var oImg=new Image();
+    oImg.onload=function(){
+      if(oImg.naturalWidth>10){
+        setWishCoverImg(b.id,'https://cover.openbd.jp/'+b.isbn+'.jpg');
+        b.cover='https://cover.openbd.jp/'+b.isbn+'.jpg';
+      } else { tryGoogle(); }
+    };
+    oImg.onerror=tryGoogle;
+    oImg.src='https://cover.openbd.jp/'+b.isbn+'.jpg?t='+Date.now();
+  } else {
+    tryGoogle();
+  }
+  function tryGoogle(){
+    fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:'+b.isbn+'&maxResults=1')
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(!d.items||!d.items[0])return;
+        var vi=d.items[0].volumeInfo;
+        // タイトルの簡易照合（最初の10文字を比較）
+        var apiTitle=(vi.title||'').toLowerCase().replace(/[^a-z0-9　-鿿]/g,'').slice(0,10);
+        var dbTitle=(b.title||'').toLowerCase().replace(/[^a-z0-9　-鿿]/g,'').slice(0,10);
+        if(apiTitle&&dbTitle&&apiTitle!==dbTitle){
+          // タイトル不一致の場合はより詳細に検索
+          return fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:'+b.isbn+'&langRestrict='+lang)
+            .then(function(r2){return r2.json();})
+            .then(function(d2){
+              if(!d2.items)return;
+              // 複数結果からタイトルが最も近いものを選ぶ
+              for(var i=0;i<d2.items.length;i++){
+                var vi2=d2.items[i].volumeInfo;
+                var t2=(vi2.title||'').toLowerCase().replace(/[^a-z0-9　-鿿]/g,'').slice(0,10);
+                if(t2&&dbTitle&&t2===dbTitle){
+                  var il2=vi2.imageLinks;
+                  if(il2&&(il2.thumbnail||il2.smallThumbnail)){
+                    setWishCoverImg(b.id,(il2.thumbnail||il2.smallThumbnail));
+                    b.cover=(il2.thumbnail||il2.smallThumbnail).replace('http://','https://');
+                  }
+                  return;
+                }
+              }
+            });
+        }
+        var il=vi.imageLinks;
+        if(il&&(il.thumbnail||il.smallThumbnail)){
+          setWishCoverImg(b.id,(il.thumbnail||il.smallThumbnail));
+          b.cover=(il.thumbnail||il.smallThumbnail).replace('http://','https://');
+        }
+      }).catch(function(){});
+  }
 }
 
 function addToWishlist(b){
@@ -1586,7 +1620,7 @@ function renderLibrary(){
     var authorTxt=b.author?esc(cleanAuthor(b.author)):'';
 
     var wrap=document.createElement('div');
-    wrap.className='lib-card-wrap';
+    wrap.className='lib-card-wrap'+(urgent?' highlight-wrap':'');
     wrap.innerHTML=
       '<div class="lib-card-inner"><div class="card'+(urgent?' highlight-card':'')+'">'
       +'<div style="display:flex;align-items:stretch;min-height:116px">'
