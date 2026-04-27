@@ -1,0 +1,7579 @@
+{
+  "version": "1.0",
+  "books": [
+    {
+      "id": 1,
+      "title": "微分積分学",
+      "author": "杉浦光夫",
+      "publisher": "東京大学出版会",
+      "series": "",
+      "isbn": "9784130620390",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9784130620390.jpg"
+    },
+    {
+      "id": 2,
+      "title": "解析入門 I",
+      "author": "杉浦光夫",
+      "publisher": "東京大学出版会",
+      "series": "基礎数学",
+      "isbn": "9784130620055",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9784130620055.jpg"
+    },
+    {
+      "id": 3,
+      "title": "解析入門 II",
+      "author": "杉浦光夫",
+      "publisher": "東京大学出版会",
+      "series": "基礎数学",
+      "isbn": "9784130620062",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9784130620062.jpg"
+    },
+    {
+      "id": 4,
+      "title": "複素解析",
+      "author": "杉浦光夫",
+      "publisher": "東京大学出版会",
+      "series": "基礎数学",
+      "isbn": "9784130620086",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784130620086.jpg"
+    },
+    {
+      "id": 5,
+      "title": "線型代数学",
+      "author": "佐武一郎",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785315016",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "線形代数学"
+      ],
+      "cover": "https://cover.openbd.jp/9784785315016.jpg"
+    },
+    {
+      "id": 6,
+      "title": "集合と位相",
+      "author": "松坂和夫",
+      "publisher": "岩波書店",
+      "series": "",
+      "isbn": "9784000298827",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "位相空間論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000298827.jpg"
+    },
+    {
+      "id": 7,
+      "title": "代数学 1",
+      "author": "雪江明彦",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "9784000050951",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000050951.jpg"
+    },
+    {
+      "id": 8,
+      "title": "代数学 2",
+      "author": "雪江明彦",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "9784535787339",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "環論・加群論"
+      ],
+      "cover": "https://cover.openbd.jp/9784535787339.jpg"
+    },
+    {
+      "id": 9,
+      "title": "代数学 3",
+      "author": "雪江明彦",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "9784535787346",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "cover": "https://cover.openbd.jp/9784535787346.jpg"
+    },
+    {
+      "id": 10,
+      "title": "位相解析",
+      "author": "吉田耕作",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055390",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055390.jpg"
+    },
+    {
+      "id": 11,
+      "title": "微分方程式",
+      "author": "高野恭一",
+      "publisher": "朝倉書店",
+      "series": "",
+      "isbn": "9784254117028",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "常微分方程式"
+      ],
+      "cover": "https://cover.openbd.jp/9784254117028.jpg"
+    },
+    {
+      "id": 12,
+      "title": "常微分方程式",
+      "author": "高崎金久",
+      "publisher": "日本評論社",
+      "series": "数学のかんどころ",
+      "isbn": "9784535784826",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "常微分方程式"
+      ],
+      "cover": "https://cover.openbd.jp/9784535784826.jpg"
+    },
+    {
+      "id": 13,
+      "title": "関数解析",
+      "author": "黒田成俊",
+      "publisher": "共立出版",
+      "series": "共立数学講座",
+      "isbn": "9784320011069",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784320011069.jpg"
+    },
+    {
+      "id": 14,
+      "title": "ルベーグ積分入門",
+      "author": "伊藤清三",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785314071",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "cover": "https://cover.openbd.jp/9784785314071.jpg"
+    },
+    {
+      "id": 15,
+      "title": "測度と積分",
+      "author": "谷島賢二",
+      "publisher": "東京大学出版会",
+      "series": "基礎数学",
+      "isbn": "9784130629034",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "cover": "https://cover.openbd.jp/9784130629034.jpg"
+    },
+    {
+      "id": 16,
+      "title": "確率論の基礎",
+      "author": "伊藤清",
+      "publisher": "岩波書店",
+      "series": "岩波基礎数学選書",
+      "isbn": "9784000054843",
+      "lang": "ja",
+      "fields": [
+        "確率・統計",
+        "確率論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000054843.jpg"
+    },
+    {
+      "id": 17,
+      "title": "確率論",
+      "author": "西尾真喜子",
+      "publisher": "実教出版",
+      "series": "",
+      "isbn": "9784407016789",
+      "lang": "ja",
+      "fields": [
+        "確率・統計",
+        "確率論"
+      ],
+      "cover": "https://cover.openbd.jp/9784407016789.jpg"
+    },
+    {
+      "id": 18,
+      "title": "数学解析",
+      "author": "小平邦彦",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055277",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055277.jpg"
+    },
+    {
+      "id": 19,
+      "title": "複素関数論",
+      "author": "笠原晧司",
+      "publisher": "サイエンス社",
+      "series": "数理科学テキストシリーズ",
+      "isbn": "9784781904467",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784781904467.jpg"
+    },
+    {
+      "id": 20,
+      "title": "微分幾何学",
+      "author": "小林昭七",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785316075",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784785316075.jpg"
+    },
+    {
+      "id": 21,
+      "title": "リーマン幾何学",
+      "author": "酒井隆",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785316082",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784785316082.jpg"
+    },
+    {
+      "id": 22,
+      "title": "代数幾何学",
+      "author": "上野健爾",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055369",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055369.jpg"
+    },
+    {
+      "id": 23,
+      "title": "整数論",
+      "author": "高木貞治",
+      "publisher": "共立出版",
+      "series": "",
+      "isbn": "9784320011038",
+      "lang": "ja",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9784320011038.jpg"
+    },
+    {
+      "id": 24,
+      "title": "解析的整数論",
+      "author": "堀田良之",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785315085",
+      "lang": "ja",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9784785315085.jpg"
+    },
+    {
+      "id": 25,
+      "title": "ホモロジー代数",
+      "author": "堀田良之",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785315078",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "ホモロジー代数"
+      ],
+      "cover": "https://cover.openbd.jp/9784785315078.jpg"
+    },
+    {
+      "id": 26,
+      "title": "加群十話",
+      "author": "永田雅宜",
+      "publisher": "朝倉書店",
+      "series": "",
+      "isbn": "9784254114539",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "環論・加群論"
+      ],
+      "cover": "https://cover.openbd.jp/9784254114539.jpg"
+    },
+    {
+      "id": 27,
+      "title": "可換体論",
+      "author": "永田雅宜",
+      "publisher": "裳華房",
+      "series": "数学選書",
+      "isbn": "9784785315009",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "cover": "https://cover.openbd.jp/9784785315009.jpg"
+    },
+    {
+      "id": 28,
+      "title": "集合・位相入門",
+      "author": "松坂和夫",
+      "publisher": "岩波書店",
+      "series": "",
+      "isbn": "9784000054423",
+      "lang": "ja",
+      "fields": [
+        "基礎",
+        "集合論・論理学"
+      ],
+      "cover": "https://cover.openbd.jp/9784000054423.jpg"
+    },
+    {
+      "id": 29,
+      "title": "数学基礎論",
+      "author": "前原昭二",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "9784781901558",
+      "lang": "ja",
+      "fields": [
+        "基礎",
+        "数理論理学"
+      ],
+      "cover": "https://cover.openbd.jp/9784781901558.jpg"
+    },
+    {
+      "id": 30,
+      "title": "数値解析入門",
+      "author": "山本哲朗",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "9784781903576",
+      "lang": "ja",
+      "fields": [
+        "応用",
+        "数値解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784781903576.jpg"
+    },
+    {
+      "id": 31,
+      "title": "フーリエ解析",
+      "author": "吉田清",
+      "publisher": "朝倉書店",
+      "series": "",
+      "isbn": "9784254114843",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "フーリエ解析・調和解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784254114843.jpg"
+    },
+    {
+      "id": 32,
+      "title": "偏微分方程式論",
+      "author": "溝畑茂",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055314",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055314.jpg"
+    },
+    {
+      "id": 33,
+      "title": "現代確率論の基礎",
+      "author": "今野紀雄",
+      "publisher": "朝倉書店",
+      "series": "",
+      "isbn": "9784254116038",
+      "lang": "ja",
+      "fields": [
+        "確率・統計",
+        "確率過程"
+      ],
+      "cover": "https://cover.openbd.jp/9784254116038.jpg"
+    },
+    {
+      "id": 34,
+      "title": "確率過程",
+      "author": "伊藤清",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055444",
+      "lang": "ja",
+      "fields": [
+        "確率・統計",
+        "確率過程"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055444.jpg"
+    },
+    {
+      "id": 35,
+      "title": "表現論",
+      "author": "木村達雄",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055468",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055468.jpg"
+    },
+    {
+      "id": 36,
+      "title": "圏論の基礎",
+      "author": "マクレーン",
+      "publisher": "丸善",
+      "series": "",
+      "isbn": "9784621061220",
+      "lang": "ja",
+      "fields": [
+        "基礎",
+        "圏論"
+      ],
+      "cover": "https://cover.openbd.jp/9784621061220.jpg"
+    },
+    {
+      "id": 37,
+      "title": "組合せ論",
+      "author": "野崎昭弘",
+      "publisher": "共立出版",
+      "series": "",
+      "isbn": "9784320019430",
+      "lang": "ja",
+      "fields": [
+        "応用",
+        "組み合わせ論"
+      ],
+      "cover": "https://cover.openbd.jp/9784320019430.jpg"
+    },
+    {
+      "id": 38,
+      "title": "グラフ理論",
+      "author": "西関隆夫",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055499",
+      "lang": "ja",
+      "fields": [
+        "応用",
+        "組み合わせ論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055499.jpg"
+    },
+    {
+      "id": 39,
+      "title": "Introduction to Commutative Algebra",
+      "author": "Atiyah, M.F.; MacDonald, I.G.",
+      "publisher": "Westview Press",
+      "series": "",
+      "isbn": "9780201407518",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "可換代数"
+      ],
+      "cover": "https://cover.openbd.jp/9780201407518.jpg"
+    },
+    {
+      "id": 40,
+      "title": "Algebra",
+      "author": "Lang, Serge",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387953854",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論",
+        "環論・加群論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387953854.jpg"
+    },
+    {
+      "id": 41,
+      "title": "Real and Complex Analysis",
+      "author": "Rudin, Walter",
+      "publisher": "McGraw-Hill",
+      "series": "",
+      "isbn": "9780070542341",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780070542341.jpg"
+    },
+    {
+      "id": 42,
+      "title": "Principles of Mathematical Analysis",
+      "author": "Rudin, Walter",
+      "publisher": "McGraw-Hill",
+      "series": "",
+      "isbn": "9780070856134",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9780070856134.jpg"
+    },
+    {
+      "id": 43,
+      "title": "Functional Analysis",
+      "author": "Rudin, Walter",
+      "publisher": "McGraw-Hill",
+      "series": "",
+      "isbn": "9780070542365",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780070542365.jpg"
+    },
+    {
+      "id": 44,
+      "title": "Algebraic Topology",
+      "author": "Hatcher, Allen",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521795401",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780521795401.jpg"
+    },
+    {
+      "id": 45,
+      "title": "Topology",
+      "author": "Munkres, James",
+      "publisher": "Pearson",
+      "series": "",
+      "isbn": "9780131816299",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相空間論"
+      ],
+      "cover": "https://cover.openbd.jp/9780131816299.jpg"
+    },
+    {
+      "id": 46,
+      "title": "Abstract Algebra",
+      "author": "Dummit, David; Foote, Richard",
+      "publisher": "Wiley",
+      "series": "",
+      "isbn": "9780471433347",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論",
+        "環論・加群論"
+      ],
+      "cover": "https://cover.openbd.jp/9780471433347.jpg"
+    },
+    {
+      "id": 47,
+      "title": "Linear Algebra Done Right",
+      "author": "Axler, Sheldon",
+      "publisher": "Springer",
+      "series": "Undergraduate Texts in Mathematics",
+      "isbn": "9783319110790",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "線形代数学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783319110790.jpg"
+    },
+    {
+      "id": 48,
+      "title": "Linear Algebra",
+      "author": "Hoffman, Kenneth; Kunze, Ray",
+      "publisher": "Pearson",
+      "series": "",
+      "isbn": "9780135367971",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "線形代数学"
+      ],
+      "cover": "https://cover.openbd.jp/9780135367971.jpg"
+    },
+    {
+      "id": 49,
+      "title": "Measure Theory",
+      "author": "Halmos, Paul",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900889",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900889.jpg"
+    },
+    {
+      "id": 50,
+      "title": "Real Analysis",
+      "author": "Royden, H.L.",
+      "publisher": "Pearson",
+      "series": "",
+      "isbn": "9780131437470",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "cover": "https://cover.openbd.jp/9780131437470.jpg"
+    },
+    {
+      "id": 51,
+      "title": "Complex Analysis",
+      "author": "Ahlfors, Lars",
+      "publisher": "McGraw-Hill",
+      "series": "",
+      "isbn": "9780070006577",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780070006577.jpg"
+    },
+    {
+      "id": 52,
+      "title": "Complex Analysis",
+      "author": "Stein, Elias; Shakarchi, Rami",
+      "publisher": "Princeton University Press",
+      "series": "Princeton Lectures in Analysis",
+      "isbn": "9780691113852",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780691113852.jpg"
+    },
+    {
+      "id": 53,
+      "title": "Real Analysis",
+      "author": "Stein, Elias; Shakarchi, Rami",
+      "publisher": "Princeton University Press",
+      "series": "Princeton Lectures in Analysis",
+      "isbn": "9780691113869",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "cover": "https://cover.openbd.jp/9780691113869.jpg"
+    },
+    {
+      "id": 54,
+      "title": "Fourier Analysis",
+      "author": "Stein, Elias; Shakarchi, Rami",
+      "publisher": "Princeton University Press",
+      "series": "Princeton Lectures in Analysis",
+      "isbn": "9780691113845",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "フーリエ解析・調和解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780691113845.jpg"
+    },
+    {
+      "id": 55,
+      "title": "Functional Analysis, Introduction to Further Topics in Analysis",
+      "author": "Stein, Elias; Shakarchi, Rami",
+      "publisher": "Princeton University Press",
+      "series": "Princeton Lectures in Analysis",
+      "isbn": "9780691113876",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780691113876.jpg"
+    },
+    {
+      "id": 56,
+      "title": "Algebraic Geometry",
+      "author": "Hartshorne, Robin",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387902449",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387902449.jpg"
+    },
+    {
+      "id": 57,
+      "title": "Commutative Algebra",
+      "author": "Eisenbud, David",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387942698",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "可換代数"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387942698.jpg"
+    },
+    {
+      "id": 58,
+      "title": "An Introduction to the Theory of Numbers",
+      "author": "Hardy, G.H.; Wright, E.M.",
+      "publisher": "Oxford University Press",
+      "series": "",
+      "isbn": "9780199219865",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9780199219865.jpg"
+    },
+    {
+      "id": 59,
+      "title": "A Course in Arithmetic",
+      "author": "Serre, Jean-Pierre",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900407",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900407.jpg"
+    },
+    {
+      "id": 60,
+      "title": "Local Fields",
+      "author": "Serre, Jean-Pierre",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387904245",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387904245.jpg"
+    },
+    {
+      "id": 61,
+      "title": "Linear Representations of Finite Groups",
+      "author": "Serre, Jean-Pierre",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901909",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901909.jpg"
+    },
+    {
+      "id": 62,
+      "title": "Differential Geometry of Curves and Surfaces",
+      "author": "do Carmo, Manfredo",
+      "publisher": "Dover",
+      "series": "",
+      "isbn": "9780486806990",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780486806990.jpg"
+    },
+    {
+      "id": 63,
+      "title": "Riemannian Geometry",
+      "author": "do Carmo, Manfredo",
+      "publisher": "Birkhäuser",
+      "series": "",
+      "isbn": "9780817634902",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780817634902.jpg"
+    },
+    {
+      "id": 64,
+      "title": "Differential Topology",
+      "author": "Guillemin, Victor; Pollack, Alan",
+      "publisher": "AMS Chelsea",
+      "series": "",
+      "isbn": "9780821851234",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780821851234.jpg"
+    },
+    {
+      "id": 65,
+      "title": "Ordinary Differential Equations",
+      "author": "Hartman, Philip",
+      "publisher": "SIAM",
+      "series": "",
+      "isbn": "9780898715101",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "常微分方程式"
+      ],
+      "cover": "https://cover.openbd.jp/9780898715101.jpg"
+    },
+    {
+      "id": 66,
+      "title": "Partial Differential Equations",
+      "author": "Evans, Lawrence",
+      "publisher": "American Mathematical Society",
+      "series": "Graduate Studies in Mathematics",
+      "isbn": "9780821849743",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "cover": "https://cover.openbd.jp/9780821849743.jpg"
+    },
+    {
+      "id": 67,
+      "title": "Partial Differential Equations",
+      "author": "Taylor, Michael",
+      "publisher": "Springer",
+      "series": "Applied Mathematical Sciences",
+      "isbn": "9781441970541",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781441970541.jpg"
+    },
+    {
+      "id": 68,
+      "title": "Probability Theory and Examples",
+      "author": "Durrett, Rick",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9781108473682",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "確率論"
+      ],
+      "cover": "https://cover.openbd.jp/9781108473682.jpg"
+    },
+    {
+      "id": 69,
+      "title": "Probability and Measure",
+      "author": "Billingsley, Patrick",
+      "publisher": "Wiley",
+      "series": "",
+      "isbn": "9781118122372",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "確率論"
+      ],
+      "cover": "https://cover.openbd.jp/9781118122372.jpg"
+    },
+    {
+      "id": 70,
+      "title": "Stochastic Differential Equations",
+      "author": "Øksendal, Bernt",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9783540047582",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "確率過程"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540047582.jpg"
+    },
+    {
+      "id": 71,
+      "title": "Brownian Motion and Stochastic Calculus",
+      "author": "Karatzas, Ioannis; Shreve, Steven",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387976556",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "確率過程"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387976556.jpg"
+    },
+    {
+      "id": 72,
+      "title": "Set Theory",
+      "author": "Jech, Thomas",
+      "publisher": "Springer",
+      "series": "Springer Monographs in Mathematics",
+      "isbn": "9783540440857",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "集合論・論理学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540440857.jpg"
+    },
+    {
+      "id": 73,
+      "title": "Introduction to Mathematical Logic",
+      "author": "Mendelson, Elliott",
+      "publisher": "CRC Press",
+      "series": "",
+      "isbn": "9781482237726",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "数理論理学"
+      ],
+      "cover": "https://cover.openbd.jp/9781482237726.jpg"
+    },
+    {
+      "id": 74,
+      "title": "Categories for the Working Mathematician",
+      "author": "Mac Lane, Saunders",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387984032",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "圏論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387984032.jpg"
+    },
+    {
+      "id": 75,
+      "title": "Homological Algebra",
+      "author": "Cartan, Henri; Eilenberg, Samuel",
+      "publisher": "Princeton University Press",
+      "series": "",
+      "isbn": "9780691049915",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "ホモロジー代数"
+      ],
+      "cover": "https://cover.openbd.jp/9780691049915.jpg"
+    },
+    {
+      "id": 76,
+      "title": "An Introduction to Homological Algebra",
+      "author": "Weibel, Charles",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521559874",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "ホモロジー代数"
+      ],
+      "cover": "https://cover.openbd.jp/9780521559874.jpg"
+    },
+    {
+      "id": 77,
+      "title": "Representation Theory",
+      "author": "Fulton, William; Harris, Joe",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387974958",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387974958.jpg"
+    },
+    {
+      "id": 78,
+      "title": "Numerical Analysis",
+      "author": "Burden, Richard; Faires, Douglas",
+      "publisher": "Cengage",
+      "series": "",
+      "isbn": "9781305253667",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "数値解析"
+      ],
+      "cover": "https://cover.openbd.jp/9781305253667.jpg"
+    },
+    {
+      "id": 79,
+      "title": "Numerical Methods for Scientists and Engineers",
+      "author": "Hamming, R.W.",
+      "publisher": "Dover",
+      "series": "",
+      "isbn": "9780486652412",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "数値解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780486652412.jpg"
+    },
+    {
+      "id": 80,
+      "title": "Mathematical Methods of Classical Mechanics",
+      "author": "Arnold, V.I.",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387968902",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "数理物理"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387968902.jpg"
+    },
+    {
+      "id": 81,
+      "title": "Methods of Mathematical Physics",
+      "author": "Courant, Richard; Hilbert, David",
+      "publisher": "Wiley",
+      "series": "",
+      "isbn": "9780471504474",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "数理物理"
+      ],
+      "cover": "https://cover.openbd.jp/9780471504474.jpg"
+    },
+    {
+      "id": 82,
+      "title": "A Course in Number Theory and Cryptography",
+      "author": "Koblitz, Neal",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387942933",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387942933.jpg"
+    },
+    {
+      "id": 83,
+      "title": "Algebraic Number Theory",
+      "author": "Neukirch, Jürgen",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540653998",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540653998.jpg"
+    },
+    {
+      "id": 84,
+      "title": "A Classical Introduction to Modern Number Theory",
+      "author": "Ireland, Kenneth; Rosen, Michael",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387973296",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387973296.jpg"
+    },
+    {
+      "id": 85,
+      "title": "Combinatorics",
+      "author": "van Lint, J.H.; Wilson, R.M.",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521006019",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "組み合わせ論"
+      ],
+      "cover": "https://cover.openbd.jp/9780521006019.jpg"
+    },
+    {
+      "id": 86,
+      "title": "Graph Theory",
+      "author": "Diestel, Reinhard",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9783662575604",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "組み合わせ論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783662575604.jpg"
+    },
+    {
+      "id": 87,
+      "title": "Topology from the Differentiable Viewpoint",
+      "author": "Milnor, John",
+      "publisher": "Princeton University Press",
+      "series": "",
+      "isbn": "9780691048338",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780691048338.jpg"
+    },
+    {
+      "id": 88,
+      "title": "Characteristic Classes",
+      "author": "Milnor, John; Stasheff, James",
+      "publisher": "Princeton University Press",
+      "series": "",
+      "isbn": "9780691081229",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780691081229.jpg"
+    },
+    {
+      "id": 89,
+      "title": "Morse Theory",
+      "author": "Milnor, John",
+      "publisher": "Princeton University Press",
+      "series": "",
+      "isbn": "9780691080086",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780691080086.jpg"
+    },
+    {
+      "id": 90,
+      "title": "Principles of Algebraic Geometry",
+      "author": "Griffiths, Phillip; Harris, Joseph",
+      "publisher": "Wiley",
+      "series": "",
+      "isbn": "9780471050599",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780471050599.jpg"
+    },
+    {
+      "id": 91,
+      "title": "The Arithmetic of Elliptic Curves",
+      "author": "Silverman, Joseph",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387094939",
+      "lang": "en",
+      "fields": [
+        "整数論",
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387094939.jpg"
+    },
+    {
+      "id": 92,
+      "title": "Advanced Topics in the Arithmetic of Elliptic Curves",
+      "author": "Silverman, Joseph",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387943282",
+      "lang": "en",
+      "fields": [
+        "整数論",
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387943282.jpg"
+    },
+    {
+      "id": 93,
+      "title": "A First Course in Abstract Algebra",
+      "author": "Fraleigh, John",
+      "publisher": "Pearson",
+      "series": "",
+      "isbn": "9780201763904",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "cover": "https://cover.openbd.jp/9780201763904.jpg"
+    },
+    {
+      "id": 94,
+      "title": "Galois Theory",
+      "author": "Stewart, Ian",
+      "publisher": "CRC Press",
+      "series": "",
+      "isbn": "9781482245837",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "cover": "https://cover.openbd.jp/9781482245837.jpg"
+    },
+    {
+      "id": 95,
+      "title": "Fields and Galois Theory",
+      "author": "Morandi, Patrick",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387947532",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387947532.jpg"
+    },
+    {
+      "id": 96,
+      "title": "Linear Algebra",
+      "author": "Shilov, Georgi",
+      "publisher": "Dover",
+      "series": "",
+      "isbn": "9780486635187",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "線形代数学"
+      ],
+      "cover": "https://cover.openbd.jp/9780486635187.jpg"
+    },
+    {
+      "id": 97,
+      "title": "Matrix Analysis",
+      "author": "Horn, Roger; Johnson, Charles",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521548236",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "線形代数学"
+      ],
+      "cover": "https://cover.openbd.jp/9780521548236.jpg"
+    },
+    {
+      "id": 98,
+      "title": "Advanced Linear Algebra",
+      "author": "Roman, Steven",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387728285",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "線形代数学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387728285.jpg"
+    },
+    {
+      "id": 99,
+      "title": "Differential Forms in Algebraic Topology",
+      "author": "Bott, Raoul; Tu, Loring",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387906133",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387906133.jpg"
+    },
+    {
+      "id": 100,
+      "title": "Introduction to Smooth Manifolds",
+      "author": "Lee, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781441999818",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781441999818.jpg"
+    },
+    {
+      "id": 101,
+      "title": "Riemannian Manifolds",
+      "author": "Lee, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387983226",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387983226.jpg"
+    },
+    {
+      "id": 102,
+      "title": "Introduction to Topological Manifolds",
+      "author": "Lee, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781441979391",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781441979391.jpg"
+    },
+    {
+      "id": 103,
+      "title": "Naive Set Theory",
+      "author": "Halmos, Paul",
+      "publisher": "Springer",
+      "series": "Undergraduate Texts in Mathematics",
+      "isbn": "9780387900926",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "集合論・論理学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900926.jpg"
+    },
+    {
+      "id": 104,
+      "title": "Set Theory: An Introduction to Independence Proofs",
+      "author": "Kunen, Kenneth",
+      "publisher": "North-Holland",
+      "series": "",
+      "isbn": "9780444868398",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "集合論・論理学"
+      ],
+      "cover": "https://cover.openbd.jp/9780444868398.jpg"
+    },
+    {
+      "id": 105,
+      "title": "Gödel, Escher, Bach",
+      "author": "Hofstadter, Douglas",
+      "publisher": "Basic Books",
+      "series": "",
+      "isbn": "9780465026562",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "数理論理学"
+      ],
+      "cover": "https://cover.openbd.jp/9780465026562.jpg"
+    },
+    {
+      "id": 106,
+      "title": "Mathematical Logic",
+      "author": "Ebbinghaus, H.-D.",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781475723557",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "数理論理学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781475723557.jpg"
+    },
+    {
+      "id": 107,
+      "title": "岩波数学辞典 第4版",
+      "author": "日本数学会",
+      "publisher": "岩波書店",
+      "series": "",
+      "isbn": "9784000803090",
+      "lang": "ja",
+      "fields": [
+        "一般"
+      ],
+      "cover": "https://cover.openbd.jp/9784000803090.jpg"
+    },
+    {
+      "id": 108,
+      "title": "数学の言葉と論理",
+      "author": "戸次大介",
+      "publisher": "丸善",
+      "series": "",
+      "isbn": "9784621088432",
+      "lang": "ja",
+      "fields": [
+        "基礎",
+        "集合論・論理学"
+      ],
+      "cover": "https://cover.openbd.jp/9784621088432.jpg"
+    },
+    {
+      "id": 109,
+      "title": "位相空間論",
+      "author": "松坂和夫",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055352",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "位相空間論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055352.jpg"
+    },
+    {
+      "id": 110,
+      "title": "代数的位相幾何学",
+      "author": "川久保勝夫",
+      "publisher": "共立出版",
+      "series": "共立数学講座",
+      "isbn": "9784320011236",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784320011236.jpg"
+    },
+    {
+      "id": 111,
+      "title": "微分形式の幾何学",
+      "author": "砂田利一",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055253",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055253.jpg"
+    },
+    {
+      "id": 112,
+      "title": "リー群と表現論",
+      "author": "小林俊行",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055222",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055222.jpg"
+    },
+    {
+      "id": 113,
+      "title": "岩澤理論",
+      "author": "竹内端三",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055406",
+      "lang": "ja",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055406.jpg"
+    },
+    {
+      "id": 114,
+      "title": "楕円関数論",
+      "author": "高木貞治",
+      "publisher": "共立出版",
+      "series": "",
+      "isbn": "9784320011113",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784320011113.jpg"
+    },
+    {
+      "id": 115,
+      "title": "関数論",
+      "author": "高木貞治",
+      "publisher": "共立出版",
+      "series": "",
+      "isbn": "9784320011021",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "cover": "https://cover.openbd.jp/9784320011021.jpg"
+    },
+    {
+      "id": 116,
+      "title": "線型代数と群の表現 I",
+      "author": "斎藤毅",
+      "publisher": "東京大学出版会",
+      "series": "",
+      "isbn": "9784130629089",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "線形代数学",
+        "表現論"
+      ],
+      "cover": "https://cover.openbd.jp/9784130629089.jpg"
+    },
+    {
+      "id": 117,
+      "title": "線型代数と群の表現 II",
+      "author": "斎藤毅",
+      "publisher": "東京大学出版会",
+      "series": "",
+      "isbn": "9784130629096",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "線形代数学",
+        "表現論"
+      ],
+      "cover": "https://cover.openbd.jp/9784130629096.jpg"
+    },
+    {
+      "id": 118,
+      "title": "微積分",
+      "author": "斎藤毅",
+      "publisher": "東京大学出版会",
+      "series": "",
+      "isbn": "9784130629027",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9784130629027.jpg"
+    },
+    {
+      "id": 119,
+      "title": "位相幾何学",
+      "author": "服部晶夫",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055291",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055291.jpg"
+    },
+    {
+      "id": 120,
+      "title": "確率微分方程式",
+      "author": "渡辺信三",
+      "publisher": "産業図書",
+      "series": "",
+      "isbn": "9784782801796",
+      "lang": "ja",
+      "fields": [
+        "確率・統計",
+        "確率過程"
+      ],
+      "cover": "https://cover.openbd.jp/9784782801796.jpg"
+    },
+    {
+      "id": 121,
+      "title": "数論 I",
+      "author": "志村五郎",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055178",
+      "lang": "ja",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055178.jpg"
+    },
+    {
+      "id": 122,
+      "title": "数論 II",
+      "author": "志村五郎",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055185",
+      "lang": "ja",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055185.jpg"
+    },
+    {
+      "id": 123,
+      "title": "多様体の基礎",
+      "author": "松本幸夫",
+      "publisher": "東京大学出版会",
+      "series": "基礎数学",
+      "isbn": "9784130620079",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784130620079.jpg"
+    },
+    {
+      "id": 124,
+      "title": "双曲幾何",
+      "author": "深谷賢治",
+      "publisher": "岩波書店",
+      "series": "岩波数学叢書",
+      "isbn": "9784000055208",
+      "lang": "ja",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9784000055208.jpg"
+    },
+    {
+      "id": 125,
+      "title": "ガロア理論",
+      "author": "Emil Artin",
+      "publisher": "ちくま学芸文庫",
+      "series": "",
+      "isbn": "9784480093356",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "cover": "https://cover.openbd.jp/9784480093356.jpg"
+    },
+    {
+      "id": 126,
+      "title": "連続群論",
+      "author": "外村彰",
+      "publisher": "朝倉書店",
+      "series": "",
+      "isbn": "9784254114423",
+      "lang": "ja",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "cover": "https://cover.openbd.jp/9784254114423.jpg"
+    },
+    {
+      "id": 127,
+      "title": "ベクトル解析",
+      "author": "高橋陽一郎",
+      "publisher": "東京大学出版会",
+      "series": "基礎数学",
+      "isbn": "9784130620130",
+      "lang": "ja",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9784130620130.jpg"
+    },
+    {
+      "id": 128,
+      "title": "Calculus",
+      "author": "Spivak, Michael",
+      "publisher": "Publish or Perish",
+      "series": "",
+      "isbn": "9780914098911",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "微分積分学"
+      ],
+      "cover": "https://cover.openbd.jp/9780914098911.jpg"
+    },
+    {
+      "id": 129,
+      "title": "Calculus on Manifolds",
+      "author": "Spivak, Michael",
+      "publisher": "Westview Press",
+      "series": "",
+      "isbn": "9780805390216",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "微分積分学",
+        "幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780805390216.jpg"
+    },
+    {
+      "id": 130,
+      "title": "A Comprehensive Introduction to Differential Geometry",
+      "author": "Spivak, Michael",
+      "publisher": "Publish or Perish",
+      "series": "",
+      "isbn": "9780914098706",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780914098706.jpg"
+    },
+    {
+      "id": 131,
+      "title": "Measure, Integration & Real Analysis",
+      "author": "Axler, Sheldon",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9783030331436",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783030331436.jpg"
+    },
+    {
+      "id": 132,
+      "title": "Number Theory",
+      "author": "Borevich, Z.I.; Shafarevich, I.R.",
+      "publisher": "Academic Press",
+      "series": "",
+      "isbn": "9780121178512",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://cover.openbd.jp/9780121178512.jpg"
+    },
+    {
+      "id": 133,
+      "title": "Basic Number Theory",
+      "author": "Weil, André",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540586555",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540586555.jpg"
+    },
+    {
+      "id": 134,
+      "title": "A Course in the Theory of Groups",
+      "author": "Robinson, Derek",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387944616",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387944616.jpg"
+    },
+    {
+      "id": 135,
+      "title": "Finite Group Theory",
+      "author": "Isaacs, I. Martin",
+      "publisher": "American Mathematical Society",
+      "series": "Graduate Studies in Mathematics",
+      "isbn": "9780821843444",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "cover": "https://cover.openbd.jp/9780821843444.jpg"
+    },
+    {
+      "id": 136,
+      "title": "Character Theory of Finite Groups",
+      "author": "Isaacs, I. Martin",
+      "publisher": "Dover",
+      "series": "",
+      "isbn": "9780486680149",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://cover.openbd.jp/9780486680149.jpg"
+    },
+    {
+      "id": 137,
+      "title": "Lie Groups, Lie Algebras, and Representations",
+      "author": "Hall, Brian",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9783319134666",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783319134666.jpg"
+    },
+    {
+      "id": 138,
+      "title": "Introduction to Lie Algebras and Representation Theory",
+      "author": "Humphreys, James",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900537",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900537.jpg"
+    },
+    {
+      "id": 139,
+      "title": "Foundations of Differential Geometry I",
+      "author": "Kobayashi, Shoshichi; Nomizu, Katsumi",
+      "publisher": "Wiley",
+      "series": "",
+      "isbn": "9780471157335",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780471157335.jpg"
+    },
+    {
+      "id": 140,
+      "title": "Foundations of Differential Geometry II",
+      "author": "Kobayashi, Shoshichi; Nomizu, Katsumi",
+      "publisher": "Wiley",
+      "series": "",
+      "isbn": "9780471157328",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780471157328.jpg"
+    },
+    {
+      "id": 141,
+      "title": "Complex Geometry",
+      "author": "Huybrechts, Daniel",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9783540212904",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学",
+        "複素解析"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540212904.jpg"
+    },
+    {
+      "id": 142,
+      "title": "Hodge Theory and Complex Algebraic Geometry I",
+      "author": "Voisin, Claire",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521718011",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780521718011.jpg"
+    },
+    {
+      "id": 143,
+      "title": "Étale Cohomology",
+      "author": "Milne, James",
+      "publisher": "Princeton University Press",
+      "series": "",
+      "isbn": "9780691082387",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "cover": "https://cover.openbd.jp/9780691082387.jpg"
+    },
+    {
+      "id": 144,
+      "title": "Modular Forms and Fermat's Last Theorem",
+      "author": "Cornell, Gary; Silverman, Joseph; Stevens, Glenn",
+      "publisher": "Springer",
+      "series": "",
+      "isbn": "9780387946092",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387946092.jpg"
+    },
+    {
+      "id": 145,
+      "title": "Introduction to Elliptic Curves and Modular Forms",
+      "author": "Koblitz, Neal",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387979663",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387979663.jpg"
+    },
+    {
+      "id": 146,
+      "title": "Spectral Theory of Self-Adjoint Operators in Hilbert Space",
+      "author": "Birman, M.Sh.; Solomjak, M.Z.",
+      "publisher": "Springer",
+      "series": "",
+      "isbn": "9789027721792",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9789027721792.jpg"
+    },
+    {
+      "id": 147,
+      "title": "Methods of Modern Mathematical Physics I",
+      "author": "Reed, Michael; Simon, Barry",
+      "publisher": "Academic Press",
+      "series": "",
+      "isbn": "9780125850018",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "数理物理",
+        "解析学",
+        "関数解析"
+      ],
+      "cover": "https://cover.openbd.jp/9780125850018.jpg"
+    },
+    {
+      "id": 148,
+      "title": "A Survey of Modern Algebra",
+      "author": "Birkhoff, Garrett; Mac Lane, Saunders",
+      "publisher": "AK Peters",
+      "series": "",
+      "isbn": "9781568810218",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論",
+        "環論・加群論"
+      ],
+      "cover": "https://cover.openbd.jp/9781568810218.jpg"
+    },
+    {
+      "id": 149,
+      "title": "Algebra: Chapter 0",
+      "author": "Aluffi, Paolo",
+      "publisher": "American Mathematical Society",
+      "series": "Graduate Studies in Mathematics",
+      "isbn": "9780821847817",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論",
+        "圏論"
+      ],
+      "cover": "https://cover.openbd.jp/9780821847817.jpg"
+    },
+    {
+      "id": 150,
+      "title": "Sheaves in Geometry and Logic",
+      "author": "Mac Lane, Saunders; Moerdijk, Ieke",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9780387977102",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "圏論",
+        "幾何学"
+      ],
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387977102.jpg"
+    },
+    {
+      "title": "Introduction to Axiomatic Set Theory",
+      "author": "Takeuti, Gaisi; Zaring, Wilson",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387906836",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "集合論・論理学"
+      ],
+      "id": 151,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387906836.jpg"
+    },
+    {
+      "title": "Measure and Category",
+      "author": "Oxtoby, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781468493030",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "id": 152,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781468493030.jpg"
+    },
+    {
+      "title": "Topological Vector Spaces",
+      "author": "Schaefer, Helmut",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781461263852",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 153,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781461263852.jpg"
+    },
+    {
+      "title": "A Course in Homological Algebra",
+      "author": "Hilton, Peter; Stammbach, Urs",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387948232",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "ホモロジー代数"
+      ],
+      "id": 154,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387948232.jpg"
+    },
+    {
+      "title": "General Topology",
+      "author": "Kelley, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901251",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相空間論"
+      ],
+      "id": 155,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901251.jpg"
+    },
+    {
+      "title": "A Course in Simple-Homotopy Theory",
+      "author": "Cohen, Marshall",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900551",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "id": 156,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900551.jpg"
+    },
+    {
+      "title": "Functions of One Complex Variable I",
+      "author": "Conway, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387903286",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "id": 157,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387903286.jpg"
+    },
+    {
+      "title": "Advanced Mathematical Analysis",
+      "author": "Beals, Richard",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900667",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 158,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900667.jpg"
+    },
+    {
+      "title": "Rings and Categories of Modules",
+      "author": "Anderson, Frank; Fuller, Kent",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387978451",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "環論・加群論"
+      ],
+      "id": 159,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387978451.jpg"
+    },
+    {
+      "title": "Stable Mappings and Their Singularities",
+      "author": "Golubitsky, Martin; Guillemin, Victor",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900697",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "id": 160,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900697.jpg"
+    },
+    {
+      "title": "Lectures in Functional Analysis and Operator Theory",
+      "author": "Berberian, Sterling",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900766",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 161,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900766.jpg"
+    },
+    {
+      "title": "The Structure of Fields",
+      "author": "Winter, David",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900780",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "id": 162,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900780.jpg"
+    },
+    {
+      "title": "Random Processes",
+      "author": "Rosenblatt, Murray",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901107",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "確率過程"
+      ],
+      "id": 163,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901107.jpg"
+    },
+    {
+      "title": "A Hilbert Space Problem Book",
+      "author": "Halmos, Paul",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781461599760",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 164,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781461599760.jpg"
+    },
+    {
+      "title": "Fibre Bundles",
+      "author": "Husemoller, Dale",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387940878",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "id": 165,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387940878.jpg"
+    },
+    {
+      "title": "Linear Algebraic Groups",
+      "author": "Humphreys, James",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901084",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "id": 166,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901084.jpg"
+    },
+    {
+      "title": "Geometric Functional Analysis and Its Applications",
+      "author": "Holmes, Richard",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901008",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 167,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901008.jpg"
+    },
+    {
+      "title": "Real and Abstract Analysis",
+      "author": "Hewitt, Edwin; Stromberg, Karl",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901077",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "id": 168,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901077.jpg"
+    },
+    {
+      "title": "Algebraic Theories",
+      "author": "Manes, Ernest",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387902173",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "圏論"
+      ],
+      "id": 169,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387902173.jpg"
+    },
+    {
+      "title": "Commutative Algebra I",
+      "author": "Zariski, Oscar; Samuel, Pierre",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387900896",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "可換代数"
+      ],
+      "id": 170,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387900896.jpg"
+    },
+    {
+      "title": "Commutative Algebra II",
+      "author": "Zariski, Oscar; Samuel, Pierre",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901459",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "可換代数"
+      ],
+      "id": 171,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901459.jpg"
+    },
+    {
+      "title": "Lectures in Abstract Algebra I",
+      "author": "Jacobson, Nathan",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901244",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "id": 172,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901244.jpg"
+    },
+    {
+      "title": "Lectures in Abstract Algebra II",
+      "author": "Jacobson, Nathan",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901268",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "id": 173,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901268.jpg"
+    },
+    {
+      "title": "Lectures in Abstract Algebra III",
+      "author": "Jacobson, Nathan",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901282",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "ホモロジー代数"
+      ],
+      "id": 174,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901282.jpg"
+    },
+    {
+      "title": "Linear Partial Differential Operators",
+      "author": "Hörmander, Lars",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9783540006626",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 175,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540006626.jpg"
+    },
+    {
+      "title": "Classical Harmonic Analysis and Locally Compact Groups",
+      "author": "Reiter, Hans",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387901350",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "フーリエ解析・調和解析"
+      ],
+      "id": 176,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387901350.jpg"
+    },
+    {
+      "title": "Differential Analysis on Complex Manifolds",
+      "author": "Wells, Raymond",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387738918",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "複素解析",
+        "代数幾何学"
+      ],
+      "id": 177,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387738918.jpg"
+    },
+    {
+      "title": "Introduction to Affine Group Schemes",
+      "author": "Waterhouse, William",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387904191",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "id": 178,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387904191.jpg"
+    },
+    {
+      "title": "Linear Operators in Hilbert Spaces",
+      "author": "Weidmann, Joachim",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781461260295",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 179,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781461260295.jpg"
+    },
+    {
+      "title": "Cyclotomic Fields",
+      "author": "Lang, Serge",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387904849",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 180,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387904849.jpg"
+    },
+    {
+      "title": "An Introduction to Ergodic Theory",
+      "author": "Walters, Peter",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387951522",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "id": 181,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387951522.jpg"
+    },
+    {
+      "title": "Lectures on Riemann Surfaces",
+      "author": "Forster, Otto",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387906171",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "id": 182,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387906171.jpg"
+    },
+    {
+      "title": "Braid Groups",
+      "author": "Birman, Joan",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387906188",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "id": 183,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387906188.jpg"
+    },
+    {
+      "title": "Representations of Compact Lie Groups",
+      "author": "Bröcker, Theodor; tom Dieck, Tammo",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9783540136781",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "表現論"
+      ],
+      "id": 184,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540136781.jpg"
+    },
+    {
+      "title": "Finite Reflection Groups",
+      "author": "Grove, Larry; Benson, Clark",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387960821",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "id": 185,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387960821.jpg"
+    },
+    {
+      "title": "Harmonic Analysis on Semi-Simple Lie Groups I",
+      "author": "Warner, Garth",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387055176",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "フーリエ解析・調和解析"
+      ],
+      "id": 186,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387055176.jpg"
+    },
+    {
+      "title": "Analysis Now",
+      "author": "Pedersen, Gert",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387967882",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 187,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387967882.jpg"
+    },
+    {
+      "title": "Introduction to Cyclotomic Fields",
+      "author": "Washington, Lawrence",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387947624",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 188,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387947624.jpg"
+    },
+    {
+      "title": "Fourier Analysis on Number Fields",
+      "author": "Ramakrishnan, Dinakar; Valenza, Robert",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387984360",
+      "lang": "en",
+      "fields": [
+        "整数論",
+        "解析学"
+      ],
+      "id": 189,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387984360.jpg"
+    },
+    {
+      "title": "Cohomology of Groups",
+      "author": "Brown, Kenneth",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387906881",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "ホモロジー代数"
+      ],
+      "id": 190,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387906881.jpg"
+    },
+    {
+      "title": "Elliptic Curves",
+      "author": "Husemöller, Dale",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387954905",
+      "lang": "en",
+      "fields": [
+        "整数論",
+        "幾何学"
+      ],
+      "id": 191,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387954905.jpg"
+    },
+    {
+      "title": "Elliptic Functions",
+      "author": "Lang, Serge",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387965307",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析",
+        "整数論"
+      ],
+      "id": 192,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387965307.jpg"
+    },
+    {
+      "title": "A Course in Functional Analysis",
+      "author": "Conway, John",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387972459",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 193,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387972459.jpg"
+    },
+    {
+      "title": "Introduction to Operator Theory I",
+      "author": "Berberian, Sterling",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387906379",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 194,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387906379.jpg"
+    },
+    {
+      "title": "Differential Geometry: Manifolds, Curves, and Surfaces",
+      "author": "Berger, Marcel; Gostiaux, Bernard",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387966267",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "id": 195,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387966267.jpg"
+    },
+    {
+      "title": "Measure and Integral",
+      "author": "Wheeden, Richard; Zygmund, Antoni",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781498702898",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "id": 196,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781498702898.jpg"
+    },
+    {
+      "title": "Differential Geometry: Connections, Curvature, and Characteristic Classes",
+      "author": "Tu, Loring",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9783319550824",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "id": 197,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783319550824.jpg"
+    },
+    {
+      "title": "Modern Graph Theory",
+      "author": "Bollobás, Béla",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387984889",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "組み合わせ論"
+      ],
+      "id": 198,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387984889.jpg"
+    },
+    {
+      "title": "Using Algebraic Geometry",
+      "author": "Cox, David; Little, John; O'Shea, Donal",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387207339",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "id": 199,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387207339.jpg"
+    },
+    {
+      "title": "Fourier Analysis on Groups",
+      "author": "Rudin, Walter",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780471523642",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "フーリエ解析・調和解析"
+      ],
+      "id": 200,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780471523642.jpg"
+    },
+    {
+      "title": "Distributions and Operators",
+      "author": "Grubb, Gerd",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387848945",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 201,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387848945.jpg"
+    },
+    {
+      "title": "Elementary Dirichlet Series and Modular Forms",
+      "author": "Shimura, Goro",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387724737",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 202,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387724737.jpg"
+    },
+    {
+      "title": "Unitary Representations and Harmonic Analysis",
+      "author": "Sugiura, Mitsuo",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780444701909",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "フーリエ解析・調和解析"
+      ],
+      "id": 203,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780444701909.jpg"
+    },
+    {
+      "title": "A Course in p-adic Analysis",
+      "author": "Robert, Alain",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387986692",
+      "lang": "en",
+      "fields": [
+        "整数論",
+        "解析学"
+      ],
+      "id": 204,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387986692.jpg"
+    },
+    {
+      "title": "Lectures on the Theory of Algebraic Numbers",
+      "author": "Hecke, Erich",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387905952",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 205,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387905952.jpg"
+    },
+    {
+      "title": "A Course in Abstract Algebra",
+      "author": "Grillet, Pierre",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387715674",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論"
+      ],
+      "id": 206,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387715674.jpg"
+    },
+    {
+      "title": "Probability Theory: A Comprehensive Course",
+      "author": "Klenke, Achim",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9783031132223",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "確率論"
+      ],
+      "id": 207,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783031132223.jpg"
+    },
+    {
+      "title": "A Course in Mathematical Logic for Mathematicians",
+      "author": "Manin, Yuri",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9781441906151",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "数理論理学"
+      ],
+      "id": 208,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781441906151.jpg"
+    },
+    {
+      "title": "Probability and Statistics",
+      "author": "Degroot, Morris; Schervish, Mark",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9780321500465",
+      "lang": "en",
+      "fields": [
+        "確率・統計",
+        "統計学"
+      ],
+      "id": 209,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780321500465.jpg"
+    },
+    {
+      "title": "Algebraic Curves and Riemann Surfaces",
+      "author": "Miranda, Rick",
+      "publisher": "American Mathematical Society",
+      "series": "Graduate Studies in Mathematics",
+      "isbn": "9780821802687",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学",
+        "複素解析"
+      ],
+      "id": 210,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780821802687.jpg"
+    },
+    {
+      "title": "Topology and Geometry",
+      "author": "Bredon, Glen",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387979267",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学",
+        "微分幾何学"
+      ],
+      "id": 211,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387979267.jpg"
+    },
+    {
+      "title": "Introduction to the Theory of Distributions",
+      "author": "Friedlander, F.G.; Joshi, M.",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521649711",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 212,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780521649711.jpg"
+    },
+    {
+      "title": "Homology Theory",
+      "author": "Vick, James",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387941264",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "id": 213,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387941264.jpg"
+    },
+    {
+      "title": "Functional Analysis, Calculus of Variations and Optimal Control",
+      "author": "Clarke, Francis",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9781447148197",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 214,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781447148197.jpg"
+    },
+    {
+      "title": "Introduction to Mechanics and Symmetry",
+      "author": "Marsden, Jerrold; Ratiu, Tudor",
+      "publisher": "Springer",
+      "series": "Texts in Applied Mathematics",
+      "isbn": "9780387986432",
+      "lang": "en",
+      "fields": [
+        "応用",
+        "数理物理"
+      ],
+      "id": 215,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387986432.jpg"
+    },
+    {
+      "title": "Cohomology of Number Fields",
+      "author": "Neukirch, Jürgen; Schmidt, Alexander; Wingberg, Kay",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540378884",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 216,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540378884.jpg"
+    },
+    {
+      "title": "Grundlehren der Mathematik: Algebra I",
+      "author": "van der Waerden, B.L.",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540567004",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "群論",
+        "環論・加群論"
+      ],
+      "id": 217,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540567004.jpg"
+    },
+    {
+      "title": "Grundlehren der Mathematik: Algebra II",
+      "author": "van der Waerden, B.L.",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540567011",
+      "lang": "en",
+      "fields": [
+        "代数学",
+        "体論・ガロア理論"
+      ],
+      "id": 218,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540567011.jpg"
+    },
+    {
+      "title": "The Analysis of Linear Partial Differential Operators I",
+      "author": "Hörmander, Lars",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540523437",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 219,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540523437.jpg"
+    },
+    {
+      "title": "The Analysis of Linear Partial Differential Operators II",
+      "author": "Hörmander, Lars",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540225164",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 220,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540225164.jpg"
+    },
+    {
+      "title": "The Analysis of Linear Partial Differential Operators III",
+      "author": "Hörmander, Lars",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540499374",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 221,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540499374.jpg"
+    },
+    {
+      "title": "The Analysis of Linear Partial Differential Operators IV",
+      "author": "Hörmander, Lars",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783642001369",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "偏微分方程式"
+      ],
+      "id": 222,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783642001369.jpg"
+    },
+    {
+      "title": "Abelian Varieties",
+      "author": "Mumford, David",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9783540080199",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "代数幾何学"
+      ],
+      "id": 223,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783540080199.jpg"
+    },
+    {
+      "title": "Geometric Integration Theory",
+      "author": "Whitney, Hassler",
+      "publisher": "Springer",
+      "series": "Grundlehren der Mathematischen Wissenschaften",
+      "isbn": "9780691079721",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "微分幾何学"
+      ],
+      "id": 224,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780691079721.jpg"
+    },
+    {
+      "title": "Linear Functional Analysis",
+      "author": "Alt, Hans Wilhelm",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9781447172802",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "関数解析"
+      ],
+      "id": 225,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9781447172802.jpg"
+    },
+    {
+      "title": "Algebraic Topology: A First Course",
+      "author": "Greenberg, Marvin; Harper, John",
+      "publisher": "Westview Press",
+      "series": "",
+      "isbn": "9780805335576",
+      "lang": "en",
+      "fields": [
+        "幾何学",
+        "位相幾何学"
+      ],
+      "id": 226,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780805335576.jpg"
+    },
+    {
+      "title": "Number Fields",
+      "author": "Marcus, Daniel",
+      "publisher": "Springer",
+      "series": "Universitext",
+      "isbn": "9783319902326",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 227,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9783319902326.jpg"
+    },
+    {
+      "title": "Differential Equations, Dynamical Systems, and an Introduction to Chaos",
+      "author": "Hirsch, Morris; Smale, Stephen; Devaney, Robert",
+      "publisher": "Springer",
+      "series": "",
+      "isbn": "9780123820105",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "常微分方程式"
+      ],
+      "id": 228,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780123820105.jpg"
+    },
+    {
+      "title": "Problems in Algebraic Number Theory",
+      "author": "Murty, M. Ram; Esmonde, Jody",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387221823",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 229,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387221823.jpg"
+    },
+    {
+      "title": "A Concise Introduction to the Theory of Numbers",
+      "author": "Baker, Alan",
+      "publisher": "Cambridge University Press",
+      "series": "",
+      "isbn": "9780521286541",
+      "lang": "en",
+      "fields": [
+        "整数論"
+      ],
+      "id": 230,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780521286541.jpg"
+    },
+    {
+      "title": "Theory of Complex Functions",
+      "author": "Remmert, Reinhold",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387971957",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "id": 231,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387971957.jpg"
+    },
+    {
+      "title": "Classical Topics in Complex Function Theory",
+      "author": "Remmert, Reinhold",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387982212",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "複素解析"
+      ],
+      "id": 232,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387982212.jpg"
+    },
+    {
+      "title": "Lectures on the Hyperreals",
+      "author": "Goldblatt, Robert",
+      "publisher": "Springer",
+      "series": "Graduate Texts in Mathematics",
+      "isbn": "9780387984643",
+      "lang": "en",
+      "fields": [
+        "基礎",
+        "数理論理学"
+      ],
+      "id": 233,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780387984643.jpg"
+    },
+    {
+      "title": "Problems in Real Analysis",
+      "author": "Aliprantis, Charalambos; Burkinshaw, Owen",
+      "publisher": "Springer",
+      "series": "",
+      "isbn": "9780120502530",
+      "lang": "en",
+      "fields": [
+        "解析学",
+        "実解析・測度論"
+      ],
+      "id": 234,
+      "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/9780120502530.jpg"
+    },
+    {
+      "id": 235,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年12月号",
+      "number": "758号",
+      "title": "数学セミナー 2024年12月号 特集：私の出会った数学者",
+      "tokushu": "私の出会った数学者",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 236,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年11月号",
+      "number": "757号",
+      "title": "数学セミナー 2024年11月号 特集：測度論・ルベーグ積分の質問箱",
+      "tokushu": "測度論・ルベーグ積分の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 237,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年10月号",
+      "number": "756号",
+      "title": "数学セミナー 2024年10月号 特集：大学数学に活きる中高数学の発想",
+      "tokushu": "大学数学に活きる中高数学の発想",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 238,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年9月号",
+      "number": "755号",
+      "title": "数学セミナー 2024年9月号 特集：あなたの知らない初等幾何",
+      "tokushu": "あなたの知らない初等幾何",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 239,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年8月号",
+      "number": "754号",
+      "title": "数学セミナー 2024年8月号 特集：生成AIとこれからの数学",
+      "tokushu": "生成AIとこれからの数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 240,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年7月号",
+      "number": "753号",
+      "title": "数学セミナー 2024年7月号 特集：線形代数，ここが山場",
+      "tokushu": "線形代数，ここが山場",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 241,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年6月号",
+      "number": "752号",
+      "title": "数学セミナー 2024年6月号 特集：微分，ここが山場",
+      "tokushu": "微分，ここが山場",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 242,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年5月号",
+      "number": "751号",
+      "title": "数学セミナー 2024年5月号 特集：あの頃に出会った本・出会いたかった本",
+      "tokushu": "あの頃に出会った本・出会いたかった本",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 243,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年4月号",
+      "number": "750号",
+      "title": "数学セミナー 2024年4月号 特集：数学とのつきあい方2024",
+      "tokushu": "数学とのつきあい方2024",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 244,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年3月号",
+      "number": "749号",
+      "title": "数学セミナー 2024年3月号 特集：防災数学",
+      "tokushu": "防災数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 245,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年2月号",
+      "number": "748号",
+      "title": "数学セミナー 2024年2月号 特集：エルゴードってなんだろう",
+      "tokushu": "エルゴードってなんだろう",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 246,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2024年1月号",
+      "number": "747号",
+      "title": "数学セミナー 2024年1月号 特集：多項式をどう見るか",
+      "tokushu": "多項式をどう見るか",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 247,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年12月号",
+      "number": "746号",
+      "title": "数学セミナー 2023年12月号 特集：仲間たちと数学を",
+      "tokushu": "仲間たちと数学を",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 248,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年11月号",
+      "number": "745号",
+      "title": "数学セミナー 2023年11月号 特集：多様体の質問箱",
+      "tokushu": "多様体の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 249,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年10月号",
+      "number": "744号",
+      "title": "数学セミナー 2023年10月号 特集：佐藤幹夫と数学",
+      "tokushu": "佐藤幹夫と数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 250,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年9月号",
+      "number": "743号",
+      "title": "数学セミナー 2023年9月号 特集：あの頃に出会った定理",
+      "tokushu": "あの頃に出会った定理",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 251,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年8月号",
+      "number": "742号",
+      "title": "数学セミナー 2023年8月号 特集：1+2+3+…=-1/12",
+      "tokushu": "1+2+3+…=-1/12",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 252,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年7月号",
+      "number": "741号",
+      "title": "数学セミナー 2023年7月号 特集：数学オリンピックを愉しむ",
+      "tokushu": "数学オリンピックを愉しむ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 253,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年6月号",
+      "number": "740号",
+      "title": "数学セミナー 2023年6月号 特集：実数を定義する・実数を理解する",
+      "tokushu": "実数を定義する・実数を理解する",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 254,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年5月号",
+      "number": "739号",
+      "title": "数学セミナー 2023年5月号 特集：単元別　高校数学はこう続く",
+      "tokushu": "単元別　高校数学はこう続く",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 255,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年4月号",
+      "number": "738号",
+      "title": "数学セミナー 2023年4月号 特集：数学とのつきあい方",
+      "tokushu": "数学とのつきあい方",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 256,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年3月号",
+      "number": "737号",
+      "title": "数学セミナー 2023年3月号 特集：有限群からその先へ",
+      "tokushu": "有限群からその先へ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 257,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年2月号",
+      "number": "736号",
+      "title": "数学セミナー 2023年2月号 特集：平行線の交わる世界",
+      "tokushu": "平行線の交わる世界",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 258,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2023年1月号",
+      "number": "735号",
+      "title": "数学セミナー 2023年1月号 特集：国際数学者会議2022　フィールズ賞業績紹介",
+      "tokushu": "国際数学者会議2022　フィールズ賞業績紹介",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 259,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年12月号",
+      "number": "734号",
+      "title": "数学セミナー 2022年12月号 特集：洋書のすすめ",
+      "tokushu": "洋書のすすめ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 260,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年11月号",
+      "number": "733号",
+      "title": "数学セミナー 2022年11月号 特集：私の選ぶ「推し図形」",
+      "tokushu": "私の選ぶ「推し図形」",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 261,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年10月号",
+      "number": "732号",
+      "title": "数学セミナー 2022年10月号 特集：ランダムウォークの進む道",
+      "tokushu": "ランダムウォークの進む道",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 262,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年9月号",
+      "number": "731号",
+      "title": "数学セミナー 2022年9月号 特集：積分のいろいろな顔",
+      "tokushu": "積分のいろいろな顔",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 263,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年8月号",
+      "number": "730号",
+      "title": "数学セミナー 2022年8月号 特集：公理という考え方",
+      "tokushu": "公理という考え方",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 264,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年7月号",
+      "number": "729号",
+      "title": "数学セミナー 2022年7月号 特集：境界の数理",
+      "tokushu": "境界の数理",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 265,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年6月号",
+      "number": "728号",
+      "title": "数学セミナー 2022年6月号 特集：ガロア理論の質問箱",
+      "tokushu": "ガロア理論の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 266,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年5月号",
+      "number": "727号",
+      "title": "数学セミナー 2022年5月号 特集：数学と歩んできた道",
+      "tokushu": "数学と歩んできた道",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 267,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年4月号",
+      "number": "726号",
+      "title": "数学セミナー 2022年4月号 特集：数学とはどのような学問か",
+      "tokushu": "数学とはどのような学問か",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 268,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年3月号",
+      "number": "725号",
+      "title": "数学セミナー 2022年3月号 特集：圏論とその先",
+      "tokushu": "圏論とその先",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 269,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年2月号",
+      "number": "724号",
+      "title": "数学セミナー 2022年2月号 特集：パズルと数学",
+      "tokushu": "パズルと数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 270,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2022年1月号",
+      "number": "723号",
+      "title": "数学セミナー 2022年1月号 特集：計算理論から量子計算理論へ",
+      "tokushu": "計算理論から量子計算理論へ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 271,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年12月号",
+      "number": "722号",
+      "title": "数学セミナー 2021年12月号 特集：この数が面白い！",
+      "tokushu": "この数が面白い！",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 272,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年11月号",
+      "number": "721号",
+      "title": "数学セミナー 2021年11月号 特集：エレガントな証明",
+      "tokushu": "エレガントな証明",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 273,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年10月号",
+      "number": "720号",
+      "title": "数学セミナー 2021年10月号 特集：楕円函数の味わい",
+      "tokushu": "楕円函数の味わい",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 274,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年9月号",
+      "number": "719号",
+      "title": "数学セミナー 2021年9月号 特集：高次元の正多面体",
+      "tokushu": "高次元の正多面体",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 275,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年8月号",
+      "number": "718号",
+      "title": "数学セミナー 2021年8月号 特集：ミクロとマクロの交差点",
+      "tokushu": "ミクロとマクロの交差点",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 276,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年7月号",
+      "number": "717号",
+      "title": "数学セミナー 2021年7月号 特集：分野別　この数学書を薦めたい！",
+      "tokushu": "分野別　この数学書を薦めたい！",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 277,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年6月号",
+      "number": "716号",
+      "title": "数学セミナー 2021年6月号 特集：数学史の質問箱",
+      "tokushu": "数学史の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 278,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年5月号",
+      "number": "715号",
+      "title": "数学セミナー 2021年5月号 特集：私が数学を志したころ",
+      "tokushu": "私が数学を志したころ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 279,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年4月号",
+      "number": "714号",
+      "title": "数学セミナー 2021年4月号 特集：なぜこの数学を学ぶのか",
+      "tokushu": "なぜこの数学を学ぶのか",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 280,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年3月号",
+      "number": "713号",
+      "title": "数学セミナー 2021年3月号 特集：ペンローズと数学",
+      "tokushu": "ペンローズと数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 281,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年2月号",
+      "number": "712号",
+      "title": "数学セミナー 2021年2月号 特集：逆数学",
+      "tokushu": "逆数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 282,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2021年1月号",
+      "number": "711号",
+      "title": "数学セミナー 2021年1月号 特集：SFと数理科学",
+      "tokushu": "SFと数理科学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 283,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年12月号",
+      "number": "710号",
+      "title": "数学セミナー 2020年12月号 特集：コロナ時代の数学",
+      "tokushu": "コロナ時代の数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 284,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年11月号",
+      "number": "709号",
+      "title": "数学セミナー 2020年11月号 特集：私の好きな予想",
+      "tokushu": "私の好きな予想",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 285,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年10月号",
+      "number": "708号",
+      "title": "数学セミナー 2020年10月号 特集：ステイホームで楽しむ「実験」数学",
+      "tokushu": "ステイホームで楽しむ「実験」数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 286,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年9月号",
+      "number": "707号",
+      "title": "数学セミナー 2020年9月号 特集：新型コロナウイルスと闘うために数学にできること",
+      "tokushu": "新型コロナウイルスと闘うために数学にできること",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 287,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年8月号",
+      "number": "706号",
+      "title": "数学セミナー 2020年8月号 特集：数「楽」の巨星たち",
+      "tokushu": "数「楽」の巨星たち",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 288,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年7月号",
+      "number": "705号",
+      "title": "数学セミナー 2020年7月号 特集：二項係数のひろがり",
+      "tokushu": "二項係数のひろがり",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 289,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年6月号",
+      "number": "704号",
+      "title": "数学セミナー 2020年6月号 特集：統計学の質問箱",
+      "tokushu": "統計学の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 290,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年5月号",
+      "number": "703号",
+      "title": "数学セミナー 2020年5月号 特集：微分積分・線形代数のここが知りたい",
+      "tokushu": "微分積分・線形代数のここが知りたい",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 291,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年4月号",
+      "number": "702号",
+      "title": "数学セミナー 2020年4月号 特集：数学のつまずき方",
+      "tokushu": "数学のつまずき方",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 292,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年3月号",
+      "number": "701号",
+      "title": "数学セミナー 2020年3月号 特集：言語の数理",
+      "tokushu": "言語の数理",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 293,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年2月号",
+      "number": "700号",
+      "title": "数学セミナー 2020年2月号 特集：巨大行列",
+      "tokushu": "巨大行列",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 294,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2020年1月号",
+      "number": "699号",
+      "title": "数学セミナー 2020年1月号 特集：3体問題と力学系",
+      "tokushu": "3体問題と力学系",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 295,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年12月号",
+      "number": "698号",
+      "title": "数学セミナー 2019年12月号 特集：私が惹かれるこの概念",
+      "tokushu": "私が惹かれるこの概念",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 296,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年11月号",
+      "number": "697号",
+      "title": "数学セミナー 2019年11月号 特集：すごい反例",
+      "tokushu": "すごい反例",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 297,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年10月号",
+      "number": "696号",
+      "title": "数学セミナー 2019年10月号 特集：いろいろな特異点",
+      "tokushu": "いろいろな特異点",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 298,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年9月号",
+      "number": "695号",
+      "title": "数学セミナー 2019年9月号 特集：現代数学の難しさについて",
+      "tokushu": "現代数学の難しさについて",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 299,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年8月号",
+      "number": "694号",
+      "title": "数学セミナー 2019年8月号 特集：ベクトル解析と物理学",
+      "tokushu": "ベクトル解析と物理学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 300,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年7月号",
+      "number": "693号",
+      "title": "数学セミナー 2019年7月号 特集：おおきな数",
+      "tokushu": "おおきな数",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 301,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年6月号",
+      "number": "692号",
+      "title": "数学セミナー 2019年6月号 特集：微分方程式の質問箱",
+      "tokushu": "微分方程式の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 302,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年5月号",
+      "number": "691号",
+      "title": "数学セミナー 2019年5月号 特集：大学数学のキーポイント（後篇）",
+      "tokushu": "大学数学のキーポイント（後篇）",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 303,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年4月号",
+      "number": "690号",
+      "title": "数学セミナー 2019年4月号 特集：大学数学のキーポイント（前篇）",
+      "tokushu": "大学数学のキーポイント（前篇）",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 304,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年3月号",
+      "number": "689号",
+      "title": "数学セミナー 2019年3月号 特集：ひろがりゆく可積分系の世界",
+      "tokushu": "ひろがりゆく可積分系の世界",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 305,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年2月号",
+      "number": "688号",
+      "title": "数学セミナー 2019年2月号 特集：ランダム行列",
+      "tokushu": "ランダム行列",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 306,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2019年1月号",
+      "number": "687号",
+      "title": "数学セミナー 2019年1月号 特集：国際数学者会議2018",
+      "tokushu": "国際数学者会議2018",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 307,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年12月号",
+      "number": "686号",
+      "title": "数学セミナー 2018年12月号 特集：幾何の概念のアイデア",
+      "tokushu": "幾何の概念のアイデア",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 308,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年11月号",
+      "number": "685号",
+      "title": "数学セミナー 2018年11月号 特集：すごい定義",
+      "tokushu": "すごい定義",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 309,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年10月号",
+      "number": "684号",
+      "title": "数学セミナー 2018年10月号 特集：「体」とはなにか",
+      "tokushu": "「体」とはなにか",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 310,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年9月号",
+      "number": "683号",
+      "title": "数学セミナー 2018年9月号 特集：間違いから発展した数学",
+      "tokushu": "間違いから発展した数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 311,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年8月号",
+      "number": "682号",
+      "title": "数学セミナー 2018年8月号 特集：フィボナッチ数の大人のたのしみ方",
+      "tokushu": "フィボナッチ数の大人のたのしみ方",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 312,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年7月号",
+      "number": "681号",
+      "title": "数学セミナー 2018年7月号 特集：絵のある数学",
+      "tokushu": "絵のある数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 313,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年6月号",
+      "number": "680号",
+      "title": "数学セミナー 2018年6月号 特集：複素関数の質問箱",
+      "tokushu": "複素関数の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 314,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年5月号",
+      "number": "679号",
+      "title": "数学セミナー 2018年5月号 特集：教科書だけじゃない！数学の本",
+      "tokushu": "教科書だけじゃない！数学の本",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 315,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年4月号",
+      "number": "678号",
+      "title": "数学セミナー 2018年4月号 特集：なぜ数学を学ぶのか",
+      "tokushu": "なぜ数学を学ぶのか",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 316,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年3月号",
+      "number": "677号",
+      "title": "数学セミナー 2018年3月号 特集：フーリエ解析ことはじめ",
+      "tokushu": "フーリエ解析ことはじめ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 317,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年2月号",
+      "number": "676号",
+      "title": "数学セミナー 2018年2月号 特集：竹内外史と数学基礎論",
+      "tokushu": "竹内外史と数学基礎論",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 318,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2018年1月号",
+      "number": "675号",
+      "title": "数学セミナー 2018年1月号 特集：現象を通して見る岩澤理論",
+      "tokushu": "現象を通して見る岩澤理論",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 319,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年12月号",
+      "number": "674号",
+      "title": "数学セミナー 2017年12月号 特集：ホモロジーがおもしろい！",
+      "tokushu": "ホモロジーがおもしろい！",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 320,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年11月号",
+      "number": "673号",
+      "title": "数学セミナー 2017年11月号 特集：コンピュータ将棋・囲碁のこれから",
+      "tokushu": "コンピュータ将棋・囲碁のこれから",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 321,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年10月号",
+      "number": "672号",
+      "title": "数学セミナー 2017年10月号 特集：不可能性の証明",
+      "tokushu": "不可能性の証明",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 322,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年9月号",
+      "number": "671号",
+      "title": "数学セミナー 2017年9月号 特集：戸田盛和とおもちゃの数理",
+      "tokushu": "戸田盛和とおもちゃの数理",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 323,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年8月号",
+      "number": "670号",
+      "title": "数学セミナー 2017年8月号 特集：分野を語る10の定理",
+      "tokushu": "分野を語る10の定理",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 324,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年7月号",
+      "number": "669号",
+      "title": "数学セミナー 2017年7月号 特集：数学研究のすすめ",
+      "tokushu": "数学研究のすすめ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 325,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年6月号",
+      "number": "668号",
+      "title": "数学セミナー 2017年6月号 特集：群論の質問箱",
+      "tokushu": "群論の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 326,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年5月号",
+      "number": "667号",
+      "title": "数学セミナー 2017年5月号 特集：中学・高校の公式から大学数学へ",
+      "tokushu": "中学・高校の公式から大学数学へ",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 327,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年4月号",
+      "number": "666号",
+      "title": "数学セミナー 2017年4月号 特集：数学の学び方",
+      "tokushu": "数学の学び方",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 328,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年3月号",
+      "number": "665号",
+      "title": "数学セミナー 2017年3月号 特集：フラクタルの今",
+      "tokushu": "フラクタルの今",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 329,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年2月号",
+      "number": "664号",
+      "title": "数学セミナー 2017年2月号 特集：整数の分割",
+      "tokushu": "整数の分割",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 330,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2017年1月号",
+      "number": "663号",
+      "title": "数学セミナー 2017年1月号 特集：目に見えない図形を扱うには",
+      "tokushu": "目に見えない図形を扱うには",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 331,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年12月号",
+      "number": "662号",
+      "title": "数学セミナー 2016年12月号 特集：デザインと数学",
+      "tokushu": "デザインと数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 332,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年11月号",
+      "number": "661号",
+      "title": "数学セミナー 2016年11月号 特集：リーマンが目指したもの",
+      "tokushu": "リーマンが目指したもの",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 333,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年10月号",
+      "number": "660号",
+      "title": "数学セミナー 2016年10月号 特集：測度とは何か",
+      "tokushu": "測度とは何か",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 334,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年9月号",
+      "number": "659号",
+      "title": "数学セミナー 2016年9月号 特集：私の選ぶとっておきの数式",
+      "tokushu": "私の選ぶとっておきの数式",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 335,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年8月号",
+      "number": "658号",
+      "title": "数学セミナー 2016年8月号 特集：情報理論入門",
+      "tokushu": "情報理論入門",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 336,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年7月号",
+      "number": "657号",
+      "title": "数学セミナー 2016年7月号 特集：中心極限定理から広がる確率論",
+      "tokushu": "中心極限定理から広がる確率論",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 337,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年6月号",
+      "number": "656号",
+      "title": "数学セミナー 2016年6月号 特集：線形代数の質問箱",
+      "tokushu": "線形代数の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 338,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年5月号",
+      "number": "655号",
+      "title": "数学セミナー 2016年5月号 特集：目に見える幾何学",
+      "tokushu": "目に見える幾何学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 339,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年4月号",
+      "number": "654号",
+      "title": "数学セミナー 2016年4月号 特集：親しもう 大学数学",
+      "tokushu": "親しもう 大学数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 340,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年3月号",
+      "number": "653号",
+      "title": "数学セミナー 2016年3月号 特集：シューア函数",
+      "tokushu": "シューア函数",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 341,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年2月号",
+      "number": "652号",
+      "title": "数学セミナー 2016年2月号 特集：平方剰余の相互法則",
+      "tokushu": "平方剰余の相互法則",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 342,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2016年1月号",
+      "number": "651号",
+      "title": "数学セミナー 2016年1月号 特集：いまこそ学ぼう 変分法",
+      "tokushu": "いまこそ学ぼう 変分法",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 343,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年12月号",
+      "number": "650号",
+      "title": "数学セミナー 2015年12月号 特集：佐武一郎の数学",
+      "tokushu": "佐武一郎の数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 344,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年11月号",
+      "number": "649号",
+      "title": "数学セミナー 2015年11月号 特集：コンピュータにできる数学・できない数学",
+      "tokushu": "コンピュータにできる数学・できない数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 345,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年10月号",
+      "number": "648号",
+      "title": "数学セミナー 2015年10月号 特集：ガンマ関数とは何か",
+      "tokushu": "ガンマ関数とは何か",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 346,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年9月号",
+      "number": "647号",
+      "title": "数学セミナー 2015年9月号 特集：伊藤清と確率論",
+      "tokushu": "伊藤清と確率論",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 347,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年8月号",
+      "number": "646号",
+      "title": "数学セミナー 2015年8月号 特集：多面体を見つめ直す",
+      "tokushu": "多面体を見つめ直す",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 348,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年7月号",
+      "number": "645号",
+      "title": "数学セミナー 2015年7月号 特集：暗号と数学",
+      "tokushu": "暗号と数学",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 349,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年6月号",
+      "number": "644号",
+      "title": "数学セミナー 2015年6月号 特集：微分積分の質問箱",
+      "tokushu": "微分積分の質問箱",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 350,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年5月号",
+      "number": "643号",
+      "title": "数学セミナー 2015年5月号 特集：大学で学ぶ数学の成り立ち",
+      "tokushu": "大学で学ぶ数学の成り立ち",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 351,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年4月号",
+      "number": "642号",
+      "title": "数学セミナー 2015年4月号 特集：大学生に薦める数学の教科書",
+      "tokushu": "大学生に薦める数学の教科書",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 352,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年3月号",
+      "number": "641号",
+      "title": "数学セミナー 2015年3月号 特集：小平邦彦と代数幾何",
+      "tokushu": "小平邦彦と代数幾何",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 353,
+      "type": "magazine",
+      "magazine": "数学セミナー",
+      "issue": "2015年2月号",
+      "number": "640号",
+      "title": "数学セミナー 2015年2月号 特集：微分方程式で現象を見る",
+      "tokushu": "微分方程式で現象を見る",
+      "author": "",
+      "publisher": "日本評論社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 354,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年12月号",
+      "number": "No.738",
+      "title": "数理科学 2024年12月号 特集：重力波の数理物理",
+      "tokushu": "重力波の数理物理",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 355,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年11月号",
+      "number": "No.737",
+      "title": "数理科学 2024年11月号 特集：格子ゲージ理論の50年",
+      "tokushu": "格子ゲージ理論の50年",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 356,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年10月号",
+      "number": "No.736",
+      "title": "数理科学 2024年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 357,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年9月号",
+      "number": "No.735",
+      "title": "数理科学 2024年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 358,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年8月号",
+      "number": "No.734",
+      "title": "数理科学 2024年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 359,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年7月号",
+      "number": "No.733",
+      "title": "数理科学 2024年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 360,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年6月号",
+      "number": "No.732",
+      "title": "数理科学 2024年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 361,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年5月号",
+      "number": "No.731",
+      "title": "数理科学 2024年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 362,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年4月号",
+      "number": "No.730",
+      "title": "数理科学 2024年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 363,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年3月号",
+      "number": "No.729",
+      "title": "数理科学 2024年3月号 特集：統計物理の視点で捉える確率論",
+      "tokushu": "統計物理の視点で捉える確率論",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 364,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年2月号",
+      "number": "No.728",
+      "title": "数理科学 2024年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 365,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2024年1月号",
+      "number": "No.727",
+      "title": "数理科学 2024年1月号 特集：重力と量子力学",
+      "tokushu": "重力と量子力学",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2024-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 366,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年12月号",
+      "number": "No.726",
+      "title": "数理科学 2023年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 367,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年11月号",
+      "number": "No.725",
+      "title": "数理科学 2023年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 368,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年10月号",
+      "number": "No.724",
+      "title": "数理科学 2023年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 369,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年9月号",
+      "number": "No.723",
+      "title": "数理科学 2023年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 370,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年8月号",
+      "number": "No.722",
+      "title": "数理科学 2023年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 371,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年7月号",
+      "number": "No.721",
+      "title": "数理科学 2023年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 372,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年6月号",
+      "number": "No.720",
+      "title": "数理科学 2023年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 373,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年5月号",
+      "number": "No.719",
+      "title": "数理科学 2023年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 374,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年4月号",
+      "number": "No.718",
+      "title": "数理科学 2023年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 375,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年3月号",
+      "number": "No.717",
+      "title": "数理科学 2023年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 376,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年2月号",
+      "number": "No.716",
+      "title": "数理科学 2023年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 377,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2023年1月号",
+      "number": "No.715",
+      "title": "数理科学 2023年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2023-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 378,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年12月号",
+      "number": "No.714",
+      "title": "数理科学 2022年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 379,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年11月号",
+      "number": "No.713",
+      "title": "数理科学 2022年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 380,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年10月号",
+      "number": "No.712",
+      "title": "数理科学 2022年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 381,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年9月号",
+      "number": "No.711",
+      "title": "数理科学 2022年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 382,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年8月号",
+      "number": "No.710",
+      "title": "数理科学 2022年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 383,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年7月号",
+      "number": "No.709",
+      "title": "数理科学 2022年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 384,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年6月号",
+      "number": "No.708",
+      "title": "数理科学 2022年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 385,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年5月号",
+      "number": "No.707",
+      "title": "数理科学 2022年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 386,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年4月号",
+      "number": "No.706",
+      "title": "数理科学 2022年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 387,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年3月号",
+      "number": "No.705",
+      "title": "数理科学 2022年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 388,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年2月号",
+      "number": "No.704",
+      "title": "数理科学 2022年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 389,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2022年1月号",
+      "number": "No.703",
+      "title": "数理科学 2022年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2022-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 390,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年12月号",
+      "number": "No.702",
+      "title": "数理科学 2021年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 391,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年11月号",
+      "number": "No.701",
+      "title": "数理科学 2021年11月号 特集：統計物理が拓く数理科学の世界",
+      "tokushu": "統計物理が拓く数理科学の世界",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 392,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年10月号",
+      "number": "No.700",
+      "title": "数理科学 2021年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 393,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年9月号",
+      "number": "No.699",
+      "title": "数理科学 2021年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 394,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年8月号",
+      "number": "No.698",
+      "title": "数理科学 2021年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 395,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年7月号",
+      "number": "No.697",
+      "title": "数理科学 2021年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 396,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年6月号",
+      "number": "No.696",
+      "title": "数理科学 2021年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 397,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年5月号",
+      "number": "No.695",
+      "title": "数理科学 2021年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 398,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年4月号",
+      "number": "No.694",
+      "title": "数理科学 2021年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 399,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年3月号",
+      "number": "No.693",
+      "title": "数理科学 2021年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 400,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年2月号",
+      "number": "No.692",
+      "title": "数理科学 2021年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 401,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2021年1月号",
+      "number": "No.691",
+      "title": "数理科学 2021年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2021-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 402,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年12月号",
+      "number": "No.690",
+      "title": "数理科学 2020年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 403,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年11月号",
+      "number": "No.689",
+      "title": "数理科学 2020年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 404,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年10月号",
+      "number": "No.688",
+      "title": "数理科学 2020年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 405,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年9月号",
+      "number": "No.687",
+      "title": "数理科学 2020年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 406,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年8月号",
+      "number": "No.686",
+      "title": "数理科学 2020年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 407,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年7月号",
+      "number": "No.685",
+      "title": "数理科学 2020年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 408,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年6月号",
+      "number": "No.684",
+      "title": "数理科学 2020年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 409,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年5月号",
+      "number": "No.683",
+      "title": "数理科学 2020年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 410,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年4月号",
+      "number": "No.682",
+      "title": "数理科学 2020年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 411,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年3月号",
+      "number": "No.681",
+      "title": "数理科学 2020年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 412,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年2月号",
+      "number": "No.680",
+      "title": "数理科学 2020年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 413,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2020年1月号",
+      "number": "No.679",
+      "title": "数理科学 2020年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2020-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 414,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年12月号",
+      "number": "No.678",
+      "title": "数理科学 2019年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 415,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年11月号",
+      "number": "No.677",
+      "title": "数理科学 2019年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 416,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年10月号",
+      "number": "No.676",
+      "title": "数理科学 2019年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 417,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年9月号",
+      "number": "No.675",
+      "title": "数理科学 2019年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 418,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年8月号",
+      "number": "No.674",
+      "title": "数理科学 2019年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 419,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年7月号",
+      "number": "No.673",
+      "title": "数理科学 2019年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 420,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年6月号",
+      "number": "No.672",
+      "title": "数理科学 2019年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 421,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年5月号",
+      "number": "No.671",
+      "title": "数理科学 2019年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 422,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年4月号",
+      "number": "No.670",
+      "title": "数理科学 2019年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 423,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年3月号",
+      "number": "No.669",
+      "title": "数理科学 2019年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 424,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年2月号",
+      "number": "No.668",
+      "title": "数理科学 2019年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 425,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2019年1月号",
+      "number": "No.667",
+      "title": "数理科学 2019年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2019-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 426,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年12月号",
+      "number": "No.666",
+      "title": "数理科学 2018年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 427,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年11月号",
+      "number": "No.665",
+      "title": "数理科学 2018年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 428,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年10月号",
+      "number": "No.664",
+      "title": "数理科学 2018年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 429,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年9月号",
+      "number": "No.663",
+      "title": "数理科学 2018年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 430,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年8月号",
+      "number": "No.662",
+      "title": "数理科学 2018年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 431,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年7月号",
+      "number": "No.661",
+      "title": "数理科学 2018年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 432,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年6月号",
+      "number": "No.660",
+      "title": "数理科学 2018年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 433,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年5月号",
+      "number": "No.659",
+      "title": "数理科学 2018年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 434,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年4月号",
+      "number": "No.658",
+      "title": "数理科学 2018年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 435,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年3月号",
+      "number": "No.657",
+      "title": "数理科学 2018年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 436,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年2月号",
+      "number": "No.656",
+      "title": "数理科学 2018年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 437,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2018年1月号",
+      "number": "No.655",
+      "title": "数理科学 2018年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2018-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 438,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年12月号",
+      "number": "No.654",
+      "title": "数理科学 2017年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 439,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年11月号",
+      "number": "No.653",
+      "title": "数理科学 2017年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 440,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年10月号",
+      "number": "No.652",
+      "title": "数理科学 2017年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 441,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年9月号",
+      "number": "No.651",
+      "title": "数理科学 2017年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 442,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年8月号",
+      "number": "No.650",
+      "title": "数理科学 2017年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 443,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年7月号",
+      "number": "No.649",
+      "title": "数理科学 2017年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 444,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年6月号",
+      "number": "No.648",
+      "title": "数理科学 2017年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 445,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年5月号",
+      "number": "No.647",
+      "title": "数理科学 2017年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 446,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年4月号",
+      "number": "No.646",
+      "title": "数理科学 2017年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 447,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年3月号",
+      "number": "No.645",
+      "title": "数理科学 2017年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 448,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年2月号",
+      "number": "No.644",
+      "title": "数理科学 2017年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 449,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2017年1月号",
+      "number": "No.643",
+      "title": "数理科学 2017年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2017-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 450,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年12月号",
+      "number": "No.642",
+      "title": "数理科学 2016年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 451,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年11月号",
+      "number": "No.641",
+      "title": "数理科学 2016年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 452,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年10月号",
+      "number": "No.640",
+      "title": "数理科学 2016年10月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 453,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年9月号",
+      "number": "No.639",
+      "title": "数理科学 2016年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 454,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年8月号",
+      "number": "No.638",
+      "title": "数理科学 2016年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 455,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年7月号",
+      "number": "No.637",
+      "title": "数理科学 2016年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 456,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年6月号",
+      "number": "No.636",
+      "title": "数理科学 2016年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 457,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年5月号",
+      "number": "No.635",
+      "title": "数理科学 2016年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 458,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年4月号",
+      "number": "No.634",
+      "title": "数理科学 2016年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 459,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年3月号",
+      "number": "No.633",
+      "title": "数理科学 2016年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 460,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年2月号",
+      "number": "No.632",
+      "title": "数理科学 2016年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 461,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2016年1月号",
+      "number": "No.631",
+      "title": "数理科学 2016年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2016-01",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 462,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年12月号",
+      "number": "No.630",
+      "title": "数理科学 2015年12月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-12",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 463,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年11月号",
+      "number": "No.629",
+      "title": "数理科学 2015年11月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-11",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 464,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年10月号",
+      "number": "No.628",
+      "title": "数理科学 2015年10月号 特集：リーマン　その多様な業績に迫る",
+      "tokushu": "リーマン　その多様な業績に迫る",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-10",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 465,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年9月号",
+      "number": "No.627",
+      "title": "数理科学 2015年9月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-09",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 466,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年8月号",
+      "number": "No.626",
+      "title": "数理科学 2015年8月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-08",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 467,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年7月号",
+      "number": "No.625",
+      "title": "数理科学 2015年7月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-07",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 468,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年6月号",
+      "number": "No.624",
+      "title": "数理科学 2015年6月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-06",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 469,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年5月号",
+      "number": "No.623",
+      "title": "数理科学 2015年5月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-05",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 470,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年4月号",
+      "number": "No.622",
+      "title": "数理科学 2015年4月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-04",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 471,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年3月号",
+      "number": "No.621",
+      "title": "数理科学 2015年3月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-03",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 472,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年2月号",
+      "number": "No.620",
+      "title": "数理科学 2015年2月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-02",
+      "fields": [
+        "一般"
+      ]
+    },
+    {
+      "id": 473,
+      "type": "magazine",
+      "magazine": "数理科学",
+      "issue": "2015年1月号",
+      "number": "No.619",
+      "title": "数理科学 2015年1月号",
+      "tokushu": "",
+      "author": "",
+      "publisher": "サイエンス社",
+      "series": "",
+      "isbn": "",
+      "lang": "ja",
+      "yearmonth": "2015-01",
+      "fields": [
+        "一般"
+      ]
+    }
+  ]
+}
