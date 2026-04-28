@@ -80,6 +80,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans','Hi
 .badge-gray{background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
 .badge-amber{background:var(--warn-dim);color:var(--warn);border:1px solid var(--warn-border)}
 .highlight-card{border-color:var(--danger)!important;border-width:1.5px!important;box-shadow:0 0 0 3px rgba(239,68,68,.08)!important}
+.lib-card-wrap{position:relative;overflow:hidden;margin-bottom:10px;border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow)}
+.lib-card-wrap.highlight-wrap{border-color:var(--danger)!important;border-width:1.5px!important}
+.lib-card-inner{transition:transform .2s ease;background:var(--bg2)}
+.lib-card-inner>.card{border-radius:0;margin-bottom:0;border:none;box-shadow:none}
+.lib-card-delete{position:absolute;right:0;top:0;bottom:0;width:72px;background:var(--danger);display:flex;align-items:center;justify-content:center;transform:translateX(100%);transition:transform .2s ease;cursor:pointer;flex-direction:column;gap:4px}
+.lib-card-delete svg{color:#fff}
+.lib-card-delete span{font-size:10px;color:#fff;font-weight:600}
 
 /* section label */
 .sec-label{font-size:10.5px;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin:12px 2px 8px;display:flex;align-items:center;gap:8px}
@@ -262,9 +269,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 <!-- 図書館 -->
 <div id="screen-library" class="screen">
   <div class="topbar">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
       <div><h1>図書館</h1><p id="lib-sub"></p></div>
-      <button id="undo-btn" onclick="undoLibAction()" style="display:none;border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 12px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">↩ 元に戻す</button>
+      <div style="display:flex;gap:6px;flex-shrink:0">
+        <button id="lib-sort-btn" onclick="toggleLibSort()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 10px;font-size:11px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap">⇅ 勉強時間</button>
+        <button id="undo-btn" onclick="undoLibAction()" style="display:none;border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 10px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap">↩ 元に戻す</button>
+      </div>
     </div>
   </div>
   <div class="scroll">
@@ -1452,6 +1462,41 @@ function getPublisherUrl(b){
   return 'https://books.google.com/books?q='+q;
 }
 
+var libSwipeActive=null;
+function addLibSwipe(wrap, bid){
+  var inner=wrap.querySelector('.lib-card-inner');
+  var delBtn=wrap.querySelector('.lib-card-delete');
+  var startX=0,startY=0,dx=0;
+  function closeAll(){
+    if(libSwipeActive&&libSwipeActive!==wrap){
+      var oi=libSwipeActive.querySelector('.lib-card-inner');
+      var od=libSwipeActive.querySelector('.lib-card-delete');
+      if(oi)oi.style.transform='';if(od)od.style.transform='';
+      libSwipeActive=null;
+    }
+  }
+  inner.addEventListener('touchstart',function(e){closeAll();startX=e.touches[0].clientX;startY=e.touches[0].clientY;dx=0;},{passive:true});
+  inner.addEventListener('touchmove',function(e){
+    dx=e.touches[0].clientX-startX;
+    var dy=e.touches[0].clientY-startY;
+    if(Math.abs(dy)>Math.abs(dx))return;
+    if(dx<0){
+      var x=Math.max(dx,-72);
+      inner.style.transform='translateX('+x+'px)';
+      delBtn.style.transform='translateX('+(100+x/72*100-100)+'%)';
+      libSwipeActive=wrap;
+    }
+  },{passive:true});
+  inner.addEventListener('touchend',function(){
+    if(dx<-36){inner.style.transform='translateX(-72px)';delBtn.style.transform='translateX(0)';}
+    else{inner.style.transform='';delBtn.style.transform='';libSwipeActive=null;}
+  });
+  delBtn.addEventListener('click',function(e){
+    e.stopPropagation();
+    if(!confirm('この本を削除しますか？'))return;
+    deleteBook(bid,'library');
+  });
+}
 function buildNavs(){
   SCREENS.forEach(s=>{
     const nav=document.getElementById('nav-'+s);if(!nav)return;
@@ -1556,6 +1601,13 @@ function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').
 
 // ── 図書館 ──────────────────────────────────────────────────
 var libFilterId='all';
+var libSortMode='study';
+function toggleLibSort(){
+  libSortMode=libSortMode==='study'?'due':'study';
+  var btn=document.getElementById('lib-sort-btn');
+  if(btn)btn.textContent=libSortMode==='study'?'⇅ 勉強時間':'⇅ 返却期限';
+  renderLibrary();
+}
 var lastLibAction=null; // {type:'return'|'extend', book, prevDueDate, prevRenewalCount}
 
 function undoLibAction(){
@@ -1615,12 +1667,14 @@ function renderLibrary(){
   }
 
   var loans=libFilterId==='all'?allLoans:allLoans.filter(function(b){return b.libraryId===libFilterId;});
+  if(libSortMode==='due'){loans=[...loans].sort(function(a,b){return (a.dueDate||'9999').localeCompare(b.dueDate||'9999');});}
   document.getElementById('lib-sub').textContent=allLoans.length+'冊借中'+(libFilterId!=='all'?'（'+loans.length+'冊表示）':'');
   var el=document.getElementById('library-list');
   if(!loans.length){el.innerHTML='<div class="empty">該当する本はありません</div>';return;}
 
   var t=today();
-  el.innerHTML=loans.map(function(b){
+  el.innerHTML='';
+  loans.forEach(function(b){
     var lib=state.libraries.find(function(l){return l.id===b.libraryId;});
     var days=diffDays(t,b.dueDate);
     var urgent=days<=7;
@@ -1630,75 +1684,54 @@ function renderLibrary(){
     var canRenew=maxR===0||rc<maxR;
     var renewalBadge=maxR>0?('<span class="badge '+(rc>=maxR?'badge-red':'badge-gray')+'">延長'+rc+'/'+maxR+'回</span>'):'';
     var authorTxt=b.author?esc(cleanAuthor(b.author)):'';
-
-    return '<div class="card'+(urgent?' highlight-card':'')+'">'
-      // ── メイン行：書影（左）＋情報（中）＋ボタン（右）
+    var wrap=document.createElement('div');
+    wrap.className='lib-card-wrap'+(urgent?' highlight-wrap':'');
+    wrap.innerHTML=
+      '<div class="lib-card-inner"><div class="card'+(urgent?' highlight-card':'')+'">'
       +'<div style="display:flex;align-items:stretch;min-height:116px">'
-      // 左：書影
-      +'<div onclick="openBookDetail('+b.id+')" style="flex-shrink:0;width:92px;background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:10px 8px;cursor:pointer">'
-      +coverEl(b)
-      +'</div>'
-      // 中：書籍情報
+      +'<div onclick="openBookDetail('+b.id+')" style="flex-shrink:0;width:92px;background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:10px 8px;cursor:pointer">'+coverEl(b)+'</div>'
       +'<div onclick="openBookDetail('+b.id+')" style="flex:1;min-width:0;padding:10px 8px;display:flex;flex-direction:column;justify-content:center;cursor:pointer">'
       +'<div class="book-title">'+esc(b.title)+'</div>'
       +'<div class="book-sub" style="margin-top:2px">'+esc(lib?lib.name:'不明')+(authorTxt?' · '+authorTxt:'')+'</div>'
       +'<div class="badges" style="margin-top:5px">'
       +'<span class="badge '+(urgent?'badge-red':'badge-gray')+'">'+dueTxt+'（'+b.dueDate+'）</span>'
       +'<span class="badge badge-blue">'+fmtH(b.studyHours)+'</span>'
-      +renewalBadge
+      +renewalBadge+'</div>'
       +'</div>'
-      +'</div>'
-      // 右：返却・延長ボタン
       +'<div style="display:flex;flex-direction:column;gap:6px;padding:10px 8px 10px 0;justify-content:center;flex-shrink:0" id="lact'+b.id+'"></div>'
       +'</div>'
-      // 下部：書影変更・削除
-      +'<div style="display:flex;justify-content:flex-end;gap:4px;padding:4px 8px;border-top:1px solid var(--border)" id="lbtn'+b.id+'"></div>'
-      +'</div>';
-  }).join('');
-
-  updateUndoBtn();
-
-  // ボタンをDOMで生成
-  loans.forEach(function(b){
-    var bid=b.id;
-    var lib=state.libraries.find(function(l){return l.id===b.libraryId;});
-    var rc=b.renewalCount||0;
-    var maxR=lib?lib.maxRenewals:0;
-    var canRenew=maxR===0||rc<maxR;
-
-    // 返却・延長ボタン
-    var actDiv=document.getElementById('lact'+bid);
+      +'<div style="display:flex;justify-content:flex-end;padding:3px 8px;border-top:1px solid var(--border)" id="lbtn'+b.id+'"></div>'
+      +'</div></div>'
+      +'<div class="lib-card-delete" id="lib-del-'+b.id+'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg><span>削除</span></div>';
+    el.appendChild(wrap);
+    addLibSwipe(wrap, b.id);
+    var actDiv=document.getElementById('lact'+b.id);
     if(actDiv){
       var bRet=document.createElement('button');
       bRet.style.cssText='padding:7px 10px;border-radius:var(--r-sm);border:1px solid var(--danger-border);background:var(--danger-dim);color:var(--danger);font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap;min-width:52px;text-align:center';
       bRet.textContent='返却';
-      bRet.onclick=(function(id){return function(e){e.stopPropagation();returnBook(id);};})(bid);
+      bRet.onclick=(function(id){return function(e){e.stopPropagation();returnBook(id);};})(b.id);
       actDiv.appendChild(bRet);
       if(canRenew){
         var bExt=document.createElement('button');
         bExt.style.cssText='padding:7px 10px;border-radius:var(--r-sm);border:1px solid var(--accent-border);background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap;min-width:52px;text-align:center';
         bExt.textContent='延長';
-        bExt.onclick=(function(id){return function(e){e.stopPropagation();extendBook(id);};})(bid);
+        bExt.onclick=(function(id){return function(e){e.stopPropagation();extendBook(id);};})(b.id);
         actDiv.appendChild(bExt);
       }
     }
-
-    // 書影変更・削除ボタン
-    var btnDiv=document.getElementById('lbtn'+bid);
-    if(btnDiv){
-      var bCover=document.createElement('button');
-      bCover.style.cssText='border:none;background:none;cursor:pointer;color:var(--text3);padding:3px 8px;font-size:11px;font-family:inherit;display:flex;align-items:center;gap:3px';
-      bCover.innerHTML='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>書影';
-      bCover.onclick=(function(id){return function(e){e.stopPropagation();openCoverModal(id);};})(bid);
-      var bDel=document.createElement('button');
-      bDel.style.cssText='border:none;background:none;cursor:pointer;color:var(--danger);padding:3px 8px;font-size:11px;font-family:inherit;display:flex;align-items:center;gap:3px';
-      bDel.innerHTML='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>削除';
-      bDel.onclick=(function(id){return function(e){e.stopPropagation();deleteBook(id,'library');};})(bid);
-      btnDiv.appendChild(bCover);
-      btnDiv.appendChild(bDel);
+    var lbtnDiv=document.getElementById('lbtn'+b.id);
+    if(lbtnDiv){
+      var bCov=document.createElement('button');
+      bCov.style.cssText='border:none;background:none;cursor:pointer;color:var(--text3);padding:3px 8px;font-size:11px;font-family:inherit;display:flex;align-items:center;gap:3px';
+      bCov.innerHTML='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>書影';
+      bCov.onclick=(function(id){return function(e){e.stopPropagation();openCoverModal(id);};})(b.id);
+      lbtnDiv.appendChild(bCov);
     }
   });
+  updateUndoBtn();
 }
+
 
 function returnBook(id){
   const b=state.books.find(x=>x.id===id);if(!b)return;
@@ -1820,36 +1853,16 @@ function showTimerView(bookId){
   if(!book){state.timer.bookId=null;showSelectView();return}
   const lib=book.type==='library'?state.libraries.find(l=>l.id===book.libraryId):null;
   document.getElementById('study-sub').textContent=book.title;
+  const canChange=!state.timer.running&&!state.timer.paused;
+  document.getElementById('study-selected-book').innerHTML=`<div class="card"><div class="book-row">${coverEl(book)}<div class="book-info"><div class="book-title">${esc(book.title)}</div><div class="book-sub">${esc(lib?lib.name:(book.author||''))}</div><div class="badges"><span class="badge badge-blue">${fmtH(book.studyHours)}</span></div></div>${canChange?`<button onclick="cancelSelect()" style="border:none;background:none;cursor:pointer;color:var(--text2);font-size:12px;flex-shrink:0;padding:4px">変更</button>`:''}</div></div>`;
   if(state.timer.running){
     clearInterval(timerInterval);
     timerInterval=setInterval(()=>{const el=document.getElementById('timer-display');if(el)el.textContent=fmtT(Math.floor((Date.now()-state.timer.start)/1000));},1000);
-    const startStr=state.timer.startTime?fmtTimeStr(state.timer.startTime):'';
-    const elapsed=Math.floor((Date.now()-state.timer.start)/1000);
-    document.getElementById('study-selected-book').innerHTML=
-      '<div class="timer-running-banner">'
-      +'<div class="timer-running-disp" id="timer-display">'+fmtT(elapsed)+'</div>'
-      +'<div style="flex:1;min-width:0">'
-      +'<div class="timer-running-label">計測中</div>'
-      +'<div class="timer-running-book">'+esc(book.title)+'</div>'
-      +(startStr?'<div class="timer-running-start">開始 '+startStr+'</div>':'')
-      +'</div></div>';
-    document.getElementById('timer-display-wrap').style.display='none';
-    document.getElementById('timer-sub').textContent='';
-    document.getElementById('timer-btns').innerHTML=`<button class="btn" onclick="timerPause()">一時停止</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;
-  } else {
-    const canChange=!state.timer.paused;
-    document.getElementById('study-selected-book').innerHTML=`<div class="card"><div class="book-row">${coverEl(book)}<div class="book-info"><div class="book-title">${esc(book.title)}</div><div class="book-sub">${esc(lib?lib.name:(book.author||''))}</div><div class="badges"><span class="badge badge-blue">${fmtH(book.studyHours)}</span></div></div>${canChange?`<button onclick="cancelSelect()" style="border:none;background:none;cursor:pointer;color:var(--text2);font-size:12px;flex-shrink:0;padding:4px">変更</button>`:''}</div></div>`;
-    document.getElementById('timer-display-wrap').style.display='';
-    if(state.timer.paused){
-      document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerResume()">再開</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;
-      document.getElementById('timer-sub').textContent='一時停止中';
-      document.getElementById('timer-display').textContent=fmtT(state.timer.elapsed);
-    } else {
-      document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerStart()">開始</button>`;
-      document.getElementById('timer-sub').textContent='開始ボタンを押して記録を開始';
-      document.getElementById('timer-display').textContent='00:00:00';
-    }
+    document.getElementById('timer-btns').innerHTML=`<button class="btn" onclick="timerPause()">一時停止</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;document.getElementById('timer-sub').textContent='';
+  document.getElementById('timer-display-wrap').style.display='none';
   }
+  else if(state.timer.paused){document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerResume()">再開</button><button class="btn danger" onclick="timerStop()">終了</button>`;document.getElementById('timer-sub').textContent='一時停止中';document.getElementById('timer-display').textContent=fmtT(state.timer.elapsed);}
+  else{document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerStart()">開始</button>`;document.getElementById('timer-sub').textContent='開始ボタンを押して記録を開始';document.getElementById('timer-display').textContent='00:00:00';}
 }
 function cancelSelect(){state.timer.bookId=null;showSelectView();}
 let timerInterval=null;
@@ -1858,10 +1871,7 @@ function timerStart(){
   state.timer.running=true;state.timer.paused=false;
   state.timer.start=Date.now()-state.timer.elapsed*1000;
   if(!state.timer.startTime) state.timer.startTime=new Date().toISOString();
-  timerInterval=setInterval(()=>{document.getElementById('timer-display').textContent=fmtT(Math.floor((Date.now()-state.timer.start)/1000));},1000);
-  document.getElementById('timer-btns').innerHTML=`<button class="btn" onclick="timerPause()">一時停止</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;
-  document.getElementById('timer-sub').textContent='';
-  // バナーに切り替え
+  // バナーを先に描画してからintervalを開始
   const book=state.books.find(b=>b.id===state.timer.bookId);
   const startStr=state.timer.startTime?fmtTimeStr(state.timer.startTime):'';
   document.getElementById('study-selected-book').innerHTML=
@@ -1874,6 +1884,13 @@ function timerStart(){
     +'</div>'
     +'</div>';
   document.getElementById('timer-display-wrap').style.display='none';
+  document.getElementById('timer-btns').innerHTML=`<button class="btn" onclick="timerPause()">一時停止</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;
+  document.getElementById('timer-sub').textContent='';
+  save();
+  timerInterval=setInterval(function(){
+    var el=document.getElementById('timer-display');
+    if(el) el.textContent=fmtT(Math.floor((Date.now()-state.timer.start)/1000));
+  },1000);
 }
 function timerPause(){clearInterval(timerInterval);state.timer.elapsed=Math.floor((Date.now()-state.timer.start)/1000);state.timer.paused=true;state.timer.running=false;document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerResume()">再開</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;document.getElementById('timer-sub').textContent='一時停止中';
   var tw=document.getElementById('timer-display-wrap');if(tw)tw.style.display='';
@@ -1912,6 +1929,7 @@ function timerCancel(){
 }
 function timerReset(){
   state.timer={running:false,paused:false,bookId:null,start:null,elapsed:0,startTime:null};
+  save(); // localStorageにもリセット状態を保存
   var tw=document.getElementById('timer-display-wrap');if(tw)tw.style.display='';
   var td=document.getElementById('timer-display');if(td)td.textContent='00:00:00';
   var ts=document.getElementById('timer-sub');if(ts)ts.textContent='開始ボタンを押して記録を開始';
