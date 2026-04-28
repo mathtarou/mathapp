@@ -1853,16 +1853,41 @@ function showTimerView(bookId){
   if(!book){state.timer.bookId=null;showSelectView();return}
   const lib=book.type==='library'?state.libraries.find(l=>l.id===book.libraryId):null;
   document.getElementById('study-sub').textContent=book.title;
-  const canChange=!state.timer.running&&!state.timer.paused;
-  document.getElementById('study-selected-book').innerHTML=`<div class="card"><div class="book-row">${coverEl(book)}<div class="book-info"><div class="book-title">${esc(book.title)}</div><div class="book-sub">${esc(lib?lib.name:(book.author||''))}</div><div class="badges"><span class="badge badge-blue">${fmtH(book.studyHours)}</span></div></div>${canChange?`<button onclick="cancelSelect()" style="border:none;background:none;cursor:pointer;color:var(--text2);font-size:12px;flex-shrink:0;padding:4px">変更</button>`:''}</div></div>`;
   if(state.timer.running){
+    // 計測中: バナーを先に描画してからsetInterval
     clearInterval(timerInterval);
-    timerInterval=setInterval(()=>{const el=document.getElementById('timer-display');if(el)el.textContent=fmtT(Math.floor((Date.now()-state.timer.start)/1000));},1000);
-    document.getElementById('timer-btns').innerHTML=`<button class="btn" onclick="timerPause()">一時停止</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;document.getElementById('timer-sub').textContent='';
-  document.getElementById('timer-display-wrap').style.display='none';
+    const startStr=state.timer.startTime?fmtTimeStr(state.timer.startTime):'';
+    const elapsed=Math.floor((Date.now()-state.timer.start)/1000);
+    document.getElementById('study-selected-book').innerHTML=
+      '<div class="timer-running-banner">'
+      +'<div class="timer-running-disp" id="timer-display">'+fmtT(elapsed)+'</div>'
+      +'<div style="flex:1;min-width:0">'
+      +'<div class="timer-running-label">計測中</div>'
+      +'<div class="timer-running-book">'+esc(book.title)+'</div>'
+      +(startStr?'<div class="timer-running-start">開始 '+startStr+'</div>':'')
+      +'</div></div>';
+    document.getElementById('timer-display-wrap').style.display='none';
+    document.getElementById('timer-sub').textContent='';
+    document.getElementById('timer-btns').innerHTML=`<button class="btn" onclick="timerPause()">一時停止</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;
+    timerInterval=setInterval(function(){
+      var el=document.getElementById('timer-display');
+      if(el) el.textContent=fmtT(Math.floor((Date.now()-state.timer.start)/1000));
+    },1000);
+  } else {
+    // 未開始・一時停止: 通常カード
+    const canChange=!state.timer.paused;
+    document.getElementById('study-selected-book').innerHTML=`<div class="card"><div class="book-row">${coverEl(book)}<div class="book-info"><div class="book-title">${esc(book.title)}</div><div class="book-sub">${esc(lib?lib.name:(book.author||''))}</div><div class="badges"><span class="badge badge-blue">${fmtH(book.studyHours)}</span></div></div>${canChange?`<button onclick="cancelSelect()" style="border:none;background:none;cursor:pointer;color:var(--text2);font-size:12px;flex-shrink:0;padding:4px">変更</button>`:''}</div></div>`;
+    document.getElementById('timer-display-wrap').style.display='';
+    if(state.timer.paused){
+      document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerResume()">再開</button><button class="btn danger" onclick="timerStop()">終了</button><button class="btn" onclick="timerCancel()" style="flex:0 0 auto;width:52px;font-size:13px;padding:13px 6px;color:var(--text3)">取消</button>`;
+      document.getElementById('timer-sub').textContent='一時停止中';
+      document.getElementById('timer-display').textContent=fmtT(state.timer.elapsed);
+    } else {
+      document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerStart()">開始</button>`;
+      document.getElementById('timer-sub').textContent='開始ボタンを押して記録を開始';
+      document.getElementById('timer-display').textContent='00:00:00';
+    }
   }
-  else if(state.timer.paused){document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerResume()">再開</button><button class="btn danger" onclick="timerStop()">終了</button>`;document.getElementById('timer-sub').textContent='一時停止中';document.getElementById('timer-display').textContent=fmtT(state.timer.elapsed);}
-  else{document.getElementById('timer-btns').innerHTML=`<button class="btn primary" onclick="timerStart()">開始</button>`;document.getElementById('timer-sub').textContent='開始ボタンを押して記録を開始';document.getElementById('timer-display').textContent='00:00:00';}
 }
 function cancelSelect(){state.timer.bookId=null;showSelectView();}
 let timerInterval=null;
