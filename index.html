@@ -261,7 +261,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 
 <!-- 本棚 -->
 <div id="screen-shelf" class="screen active">
-  <div class="topbar"><h1 ondblclick="gotoScreen('magazine')" style="cursor:default" title="ダブルタップで雑誌へ">マイ本棚</h1><p id="shelf-sub"></p></div>
+  <div class="topbar">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div><h1 ondblclick="gotoScreen('magazine')" style="cursor:default" title="ダブルタップで雑誌へ">マイ本棚</h1><p id="shelf-sub"></p></div>
+      <button onclick="gotoScreen('wishlist')" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 10px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">♡ ウィッシュリスト</button>
+    </div>
+  </div>
   <div class="scroll" id="shelf-list"></div>
   <nav class="navbar" id="nav-shelf"></nav>
 </div>
@@ -389,6 +394,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
         <select id="acquire-type" onchange="onAcquireChange()">
           <option value="own">購入・所持</option>
           <option value="library">図書館から借りた</option>
+          <option value="wishlist">ウィッシュリストに追加</option>
         </select>
       </div>
       <div id="library-fields" style="display:none">
@@ -396,6 +402,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
         <div class="form-group"><label class="form-label">貸出日（空欄＝今日）</label><input type="date" id="loan-date"></div>
       </div>
       <button class="btn primary full" id="register-btn" onclick="registerBook()" disabled>本を登録する</button>
+      
     </div>
 
     <!-- 図書館登録 -->
@@ -449,13 +456,10 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 <div id="screen-wish" class="screen">
   <div class="topbar">
     <h1>探す</h1>
-    <p id="wish-sub">数学書を検索してウィッシュリストに追加</p>
+    <p id="wish-sub">数学書を検索</p>
   </div>
   <div class="scroll">
-    <div class="tab-bar" id="wish-tabs">
-      <button class="tab active" onclick="switchWishTab('search',this)">検索</button>
-      <button class="tab" onclick="switchWishTab('list',this)">ウィッシュリスト</button>
-    </div>
+    <div class="tab-bar" id="wish-tabs" style="display:none"></div>
     <div id="wish-search">
       <div class="form-group">
         <div style="display:flex;gap:8px">
@@ -470,11 +474,24 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
       <div class="filter-row" id="wish-field-filters" style="margin-bottom:10px"></div>
       <div id="wish-results"></div>
     </div>
-    <div id="wish-list-view" style="display:none">
-      <div id="wish-list-content"></div>
-    </div>
+    <div id="wish-list-view" style="display:none"><div id="wish-list-content"></div></div>
   </div>
   <nav class="navbar" id="nav-wish"></nav>
+</div>
+
+<!-- ウィッシュリスト -->
+<div id="screen-wishlist" class="screen">
+  <div class="topbar">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div><h1>ウィッシュリスト</h1><p id="wishlist-sub"></p></div>
+      <button onclick="gotoScreen('shelf')" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 12px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer">← 本棚へ</button>
+    </div>
+  </div>
+  <div class="scroll">
+    <div class="filter-row" id="wishlist-filter-row"></div>
+    <div id="wishlist-content"></div>
+  </div>
+  <nav class="navbar" id="nav-wishlist"></nav>
 </div>
 
 <!-- 雑誌 (裏オプション) -->
@@ -560,7 +577,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 </div>
 
 <script>
-const SCREENS=['shelf','library','study','records','register','history','wish','magazine'];
+const SCREENS=['shelf','library','study','records','register','history','wish','magazine','wishlist'];
 const COLORS=['#2563eb','#16a34a','#ea580c','#9333ea','#ca8a04','#db2777'];
 const NAV=[
   {id:'shelf',lbl:'本棚',svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13"/><path d="M4 19h16"/><path d="M9 10h6"/><path d="M9 14h6"/></svg>'},
@@ -781,7 +798,7 @@ function renderWishScreen(){
     buildWishFieldFilters();
     searchBooks();
     renderWishList();
-    document.getElementById('wish-sub').textContent='数学書 '+wishDB.length+'冊 / ウィッシュリスト '+state.wishlist.length+'冊';
+    document.getElementById('wish-sub').textContent='数学書 '+(wishDB?wishDB.length:0)+'冊';
   });
 }
 
@@ -1045,7 +1062,7 @@ function addToWishlist(b){
   state.wishlist.push({id:state.nextWishId++,dbId:b.id,isbn:b.isbn,title:b.title,author:b.author,publisher:b.publisher,series:b.series,lang:b.lang,fields:b.fields,addedDate:today(),memo:''});
   save();
   showToast('ウィッシュリストに追加しました');
-  document.getElementById('wish-sub').textContent='数学書 '+wishDB.length+'冊 / ウィッシュリスト '+state.wishlist.length+'冊';
+  document.getElementById('wish-sub').textContent='数学書 '+(wishDB?wishDB.length:0)+'冊';
 }
 
 function removeFromWishlist(dbId){
@@ -1053,7 +1070,7 @@ function removeFromWishlist(dbId){
   save();
   showToast('削除しました');
   if(wishCurrentTab==='list')renderWishList();
-  document.getElementById('wish-sub').textContent='数学書 '+(wishDB?wishDB.length:0)+'冊 / ウィッシュリスト '+state.wishlist.length+'冊';
+  document.getElementById('wish-sub').textContent='数学書 '+(wishDB?wishDB.length:0)+'冊';
 }
 
 function renderWishList(){
@@ -1112,7 +1129,7 @@ function renderWishList(){
 function removeWishById(wid){
   state.wishlist=state.wishlist.filter(function(w){return w.id!==wid;});
   save();showToast('削除しました');renderWishList();
-  document.getElementById('wish-sub').textContent='数学書 '+(wishDB?wishDB.length:0)+'冊 / ウィッシュリスト '+state.wishlist.length+'冊';
+  document.getElementById('wish-sub').textContent='数学書 '+(wishDB?wishDB.length:0)+'冊';
 }
 
 function registerFromWish(w){
@@ -1497,6 +1514,139 @@ function addLibSwipe(wrap, bid){
     deleteBook(bid,'library');
   });
 }
+// ── ウィッシュリスト画面 ────────────────────────────────────
+var wishlistFilter='all';
+
+function renderWishlistScreen(){
+  if(!state.wishlist)state.wishlist=[];
+  var books=state.wishlist.filter(function(w){return w.type!=='magazine';});
+  var mags=state.wishlist.filter(function(w){return w.type==='magazine';});
+  document.getElementById('wishlist-sub').textContent=books.length+'冊 · 雑誌'+mags.length+'件';
+
+  // フィルターボタン
+  var filterRow=document.getElementById('wishlist-filter-row');
+  if(filterRow){
+    filterRow.innerHTML='';
+    [['all','すべて'],['book','本'],['magazine','雑誌']].forEach(function(pair){
+      var btn=document.createElement('button');
+      btn.className='filter-btn'+(wishlistFilter===pair[0]?' active':'');
+      btn.textContent=pair[1];
+      btn.onclick=(function(f){return function(){wishlistFilter=f;renderWishlistScreen();};})(pair[0]);
+      filterRow.appendChild(btn);
+    });
+  }
+
+  var items=state.wishlist.filter(function(w){
+    if(wishlistFilter==='book')return w.type!=='magazine';
+    if(wishlistFilter==='magazine')return w.type==='magazine';
+    return true;
+  });
+
+  var el=document.getElementById('wishlist-content');
+  if(!items.length){
+    el.innerHTML='<div class="empty">ウィッシュリストは空です<br><small style="font-size:12px;color:var(--text3)">本棚→ISBN検索、または「探す」から追加できます</small></div>';
+    return;
+  }
+
+  el.innerHTML='';
+  items.forEach(function(w){
+    var isMag=w.type==='magazine';
+    var inShelf=!isMag&&state.books.some(function(b){return b.isbn===w.isbn;});
+    var card=document.createElement('div');
+    card.className='card';
+    card.style.marginBottom='8px';
+
+    // 書影
+    var coverHtml=isMag
+      ?('<div style="width:64px;height:90px;border-radius:2px;flex-shrink:0;background:'+(w.magazine==='数学セミナー'?'#2563eb':'#7c3aed')+';display:flex;align-items:center;justify-content:center;padding:4px"><div style="font-size:8px;color:#fff;font-weight:700;text-align:center;line-height:1.4">'+esc(w.magazine==='数学セミナー'?'数学\nセミナー':'数理\n科学')+'</div></div>')
+      :w.cover
+        ?('<img src="'+w.cover.replace('http://','https://')+'" style="width:64px;height:90px;object-fit:cover;border-radius:2px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15)">')
+        :('<div class="book-cover-ph" style="width:64px;height:90px;background:'+COLORS[((w.dbId||w.id)||0)%COLORS.length]+'">'+esc((w.title||'').slice(0,4))+'</div>');
+
+    var mainTitle=isMag?(w.issue+(w.tokushu?' 特集：'+w.tokushu:'')):(w.title||'');
+    var sub1=isMag?(w.magazine+' '+(w.number||'')):(w.author?cleanAuthor(w.author):'');
+    var sub2=isMag?(w.publisher||''):(w.publisher||'')+(w.series?' · '+w.series:'');
+
+    card.innerHTML=
+      '<div style="display:flex;gap:12px;padding:12px;align-items:flex-start">'
+      +coverHtml
+      +'<div style="flex:1;min-width:0">'
+      +'<div class="book-title">'+esc(mainTitle)+'</div>'
+      +'<div class="book-sub" style="margin-top:2px">'+esc(sub1)+'</div>'
+      +'<div style="font-size:11px;color:var(--text3);margin-bottom:5px">'+esc(sub2)+'</div>'
+      +'<div style="display:flex;flex-wrap:wrap;gap:3px">'
+      +(isMag?'<span class="badge badge-blue" style="font-size:9px">雑誌</span>':'')
+      +(w.lang==='en'?'<span class="badge badge-amber" style="font-size:9px">洋書</span>':'')
+      +(inShelf?'<span class="badge badge-green" style="font-size:9px">登録済</span>':'')
+      +(w.addedDate?'<span class="badge badge-gray" style="font-size:9px">追加: '+w.addedDate+'</span>':'')
+      +'</div>'
+      +'</div>'
+      +'<div style="flex-shrink:0;display:flex;flex-direction:column;gap:6px" id="wl-btn-'+w.id+'"></div>'
+      +'</div>';
+    el.appendChild(card);
+
+    // ボタン
+    var btnDiv=card.querySelector('#wl-btn-'+w.id);
+    if(!inShelf&&!isMag){
+      var btnReg=document.createElement('button');
+      btnReg.style.cssText='border:1px solid var(--accent2-border);background:var(--accent2-dim);border-radius:var(--r-sm);padding:5px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--accent2);white-space:nowrap';
+      btnReg.textContent='登録';
+      btnReg.onclick=(function(wish){return function(){registerFromWish(wish);};})(w);
+      btnDiv.appendChild(btnReg);
+    }
+    if(isMag){
+      var inMagList=(state.magazines||[]).some(function(m){return m.dbId===w.dbId;});
+      if(!inMagList){
+        var btnMag=document.createElement('button');
+        btnMag.style.cssText='border:1px solid var(--accent-border);background:var(--accent-dim);border-radius:var(--r-sm);padding:5px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--accent);white-space:nowrap';
+        btnMag.textContent='登録';
+        btnMag.onclick=(function(wish){return function(){
+          if(wishDB){var dbItem=wishDB.find(function(x){return x.id===wish.dbId;});if(dbItem)showMagRegModal(dbItem);}
+        };})(w);
+        btnDiv.appendChild(btnMag);
+      }
+    }
+    var btnDel=document.createElement('button');
+    btnDel.style.cssText='border:none;background:none;cursor:pointer;color:var(--danger);font-size:11px;font-family:inherit;padding:2px 0';
+    btnDel.textContent='削除';
+    btnDel.onclick=(function(wid){return function(){removeWishById(wid);renderWishlistScreen();};})(w.id);
+    btnDiv.appendChild(btnDel);
+  });
+}
+
+function addCurrentToWishlist(){
+  // pendingBook から情報を取得
+  if(!pendingBook||!pendingBook.title){showToast('先にISBN検索または手動入力してください');return;}
+  var isbn=pendingBook.isbn||'';
+  var title=pendingBook.title||'';
+  var author=pendingBook.author||'';
+  var publisher=pendingBook.publisher||'';
+  var cover=pendingCover||pendingBook.cover||'';
+  // 重複チェック
+  if(state.wishlist.some(function(w){return w.isbn&&w.isbn===isbn&&w.type!=='magazine';})){
+    showToast('すでにウィッシュリストに追加されています');return;
+  }
+  if(state.books.some(function(b){return b.isbn===isbn;})){
+    showToast('すでに本棚に登録されています');return;
+  }
+  if(!state.nextWishId)state.nextWishId=1;
+  state.wishlist.push({
+    id:state.nextWishId++,
+    dbId:null,
+    type:'book',
+    isbn:isbn,
+    title:title,
+    author:author,
+    publisher:publisher,
+    cover:cover,
+    lang:'',
+    fields:[],
+    addedDate:today()
+  });
+  save();
+  showToast('「'+title+'」をウィッシュリストに追加しました');
+}
+
 function buildNavs(){
   SCREENS.forEach(s=>{
     const nav=document.getElementById('nav-'+s);if(!nav)return;
@@ -1512,7 +1662,7 @@ function gotoScreen(id){
   state.currentScreen=id;
   SCREENS.forEach(s=>document.getElementById('screen-'+s).classList.toggle('active',s===id));
   buildNavs();
-  ({shelf:renderShelf,library:renderLibrary,study:renderStudyScreen,records:renderRecords,history:renderHistory,register:()=>renderLibListReg(),wish:renderWishScreen,magazine:renderMagazineScreen})[id]?.();
+  ({shelf:renderShelf,library:renderLibrary,study:renderStudyScreen,records:renderRecords,history:renderHistory,register:()=>renderLibListReg(),wish:renderWishScreen,magazine:renderMagazineScreen,wishlist:renderWishlistScreen})[id]?.();
 }
 
 // ── ユーティリティ ──────────────────────────────────────────
@@ -2364,8 +2514,10 @@ function handleCoverFile(input){
 
 function registerBook(){
   let fb={...pendingBook};if(!fb||!fb.isbn){showToast('先にISBNを検索してください');return}
-  // 重複チェック
   var acqTypeCheck=document.getElementById('acquire-type').value;
+  // ウィッシュリスト選択時は addCurrentToWishlist に委譲
+  if(acqTypeCheck==='wishlist'){addCurrentToWishlist();return;}
+  // 重複チェック（登録ボタン押下時）
   var dupOwn=state.books.find(function(b){return b.isbn===fb.isbn&&b.type==='own';});
   var dupLib=state.books.find(function(b){return b.isbn===fb.isbn&&b.type==='library';});
   if(acqTypeCheck==='own'&&dupOwn){showToast('この本はすでに本棚に登録されています');return}
@@ -2404,20 +2556,18 @@ function registerBook(){
 
 function onAcquireChange(){
   var acqVal=document.getElementById('acquire-type').value;
-  var show=acqVal==='library';
-  document.getElementById('library-fields').style.display=show?'':'none';
-  if(show){var sel=document.getElementById('reg-library-select');sel.innerHTML='<option value="">-- 図書館を選択 --</option>'+state.libraries.map(function(l){return'<option value="'+l.id+'">'+esc(l.name)+'</option>';}).join('');}
-  // 取得元を変えたとき重複チェックを再実行
-  if(pendingBook&&pendingBook.isbn){
-    var dup=state.books.find(function(b){return b.isbn===pendingBook.isbn&&(acqVal==='own'?b.type==='own':b.type==='library');});
-    var note=document.getElementById('isbn-source-note');
-    if(dup){
-      note.textContent='⚠ この本はすでに'+(acqVal==='own'?'本棚':'図書館')+'に登録されています';
-      note.style.color='var(--danger)';
-      document.getElementById('register-btn').disabled=true;
+  var showLib=acqVal==='library';
+  var showWish=acqVal==='wishlist';
+  document.getElementById('library-fields').style.display=showLib?'':'none';
+  if(showLib){var sel=document.getElementById('reg-library-select');sel.innerHTML='<option value="">-- 図書館を選択 --</option>'+state.libraries.map(function(l){return'<option value="'+l.id+'">'+esc(l.name)+'</option>';}).join('');}
+  // ウィッシュリスト選択時はボタンラベルを変更
+  var btn=document.getElementById('register-btn');
+  if(btn){
+    if(showWish){
+      btn.textContent='♡ ウィッシュリストに追加';
+      btn.disabled=pendingBook&&pendingBook.title?false:true;
     } else {
-      note.style.color='';
-      document.getElementById('register-btn').disabled=pendingBook.title?false:true;
+      btn.textContent='本を登録する';
     }
   }
 }
