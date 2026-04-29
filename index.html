@@ -1133,15 +1133,15 @@ function removeWishById(wid){
 }
 
 function registerFromWish(w){
-  // 登録画面に移動してISBNをセット
   gotoScreen('register');
-  document.getElementById('isbn-input').value=w.isbn;
-  showToast('ISBNをセットしました。検索ボタンを押してください');
+  setTimeout(function(){
+    var input=document.getElementById('isbn-input');
+    if(input){
+      input.value=w.isbn||'';
+      lookupISBN();
+    }
+  },100);
 }
-
-// ── 雑誌 ─────────────────────────────────────────────────
-var magFilter='all';
-
 function switchMagTab(tab, btn){
   document.querySelectorAll('#mag-tabs .tab').forEach(function(t){t.classList.remove('active');});
   btn.classList.add('active');
