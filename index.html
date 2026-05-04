@@ -441,6 +441,17 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
         <button class="btn full" id="btn-import-latest" onclick="importLatest()" style="display:none">⚡ 最新のバックアップを読み込む</button>
         <div id="latest-backup-info" style="font-size:11px;color:var(--text2);margin-top:6px"></div>
       </div>
+      <div class="sec-label" style="margin-top:8px">API設定</div>
+      <div class="reg-card">
+        <div class="reg-card-title">Google Books APIキー</div>
+        <div class="reg-card-desc">ISBN検索の精度を高めます。Google Cloud ConsoleでAPIキーを取得して入力してください。</div>
+        <div style="display:flex;gap:8px;margin-bottom:8px">
+          <input type="password" id="google-api-key-input" placeholder="AIza..." style="flex:1;font-size:13px;padding:8px 10px">
+          <button class="btn primary" style="flex:0 0 auto;padding:8px 12px;font-size:13px" onclick="saveGoogleApiKey()">保存</button>
+        </div>
+        <div id="google-api-key-status" style="font-size:11px;color:var(--text3)"></div>
+        <button class="btn" style="margin-top:6px;font-size:12px" onclick="clearGoogleApiKey()">APIキーを削除</button>
+      </div>
       <div class="sec-label" style="margin-top:8px">記録エクスポート</div>
       <div class="reg-card">
         <div class="reg-card-title">勉強記録 CSVエクスポート</div>
@@ -1615,26 +1626,13 @@ function renderWishlistScreen(){
 }
 
 function addCurrentToWishlist(){
-  // pendingBook または手動入力フォームから情報を取得
-  var isbn='',title='',author='',publisher='',cover='';
-  if(pendingBook&&pendingBook.title){
-    isbn=pendingBook.isbn||'';
-    title=pendingBook.title||'';
-    author=pendingBook.author||'';
-    publisher=pendingBook.publisher||'';
-    cover=pendingCover||pendingBook.cover||'';
-  } else {
-    var manualTitleEl=document.getElementById('manual-title');
-    var manualAuthorEl=document.getElementById('manual-author');
-    var manualPubEl=document.getElementById('manual-publisher');
-    var isbnEl=document.getElementById('isbn-input');
-    title=manualTitleEl?manualTitleEl.value.trim():'';
-    author=manualAuthorEl?manualAuthorEl.value.trim():'';
-    publisher=manualPubEl?manualPubEl.value.trim():'';
-    isbn=isbnEl?isbnEl.value.trim().replace(/[-\s]/g,''):'';
-    cover=pendingCover||'';
-    if(!title){showToast('タイトルを入力してください');return;}
-  }
+  // pendingBook から情報を取得
+  if(!pendingBook||!pendingBook.title){showToast('先にISBN検索または手動入力してください');return;}
+  var isbn=pendingBook.isbn||'';
+  var title=pendingBook.title||'';
+  var author=pendingBook.author||'';
+  var publisher=pendingBook.publisher||'';
+  var cover=pendingCover||pendingBook.cover||'';
   // 重複チェック
   if(state.wishlist.some(function(w){return w.isbn&&w.isbn===isbn&&w.type!=='magazine';})){
     showToast('すでにウィッシュリストに追加されています');return;
@@ -1657,7 +1655,7 @@ function addCurrentToWishlist(){
     addedDate:today()
   });
   save();
-  showToast('ウィッシュリストに追加しました');
+  showToast('「'+title+'」をウィッシュリストに追加しました');
 }
 
 function buildNavs(){
@@ -2438,7 +2436,7 @@ async function lookupISBN(){
 
   if(!title||!cover){
     setStep('step-google','active');
-    try{const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`);const data=await r.json();if(data.items&&data.items[0]){const vi=data.items[0].volumeInfo;if(!title){title=vi.title||'';author=(vi.authors||[]).join(', ');}if(!cover){const il=vi.imageLinks;cover=il?(il.thumbnail||il.smallThumbnail||null):null;}setStep('step-google','done',title&&cover?'書誌・書影':title?'書誌':'書影');if(title||cover)sources.push('Google Books');}else setStep('step-google','fail','なし');}catch(e){setStep('step-google','fail','エラー');}
+    try{const _gk=getGoogleApiKey();const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`+(_gk?`&key=${_gk}`:''));const data=await r.json();if(data.items&&data.items[0]){const vi=data.items[0].volumeInfo;if(!title){title=vi.title||'';author=(vi.authors||[]).join(', ');}if(!cover){const il=vi.imageLinks;cover=il?(il.thumbnail||il.smallThumbnail||null):null;}setStep('step-google','done',title&&cover?'書誌・書影':title?'書誌':'書影');if(title||cover)sources.push('Google Books');}else setStep('step-google','fail','なし');}catch(e){setStep('step-google','fail','エラー');}
   }else setStep('step-google','skip','スキップ');
 
   if(!cover){setStep('step-hanmoto','active');const r=await checkImgUrl(`https://www.hanmoto.com/bd/img/${isbn}.jpg`);if(r){cover=r;sources.push('版元ドットコム');setStep('step-hanmoto','done','書影取得');}else setStep('step-hanmoto','fail','なし');}
@@ -2573,13 +2571,12 @@ function onAcquireChange(){
   var showWish=acqVal==='wishlist';
   document.getElementById('library-fields').style.display=showLib?'':'none';
   if(showLib){var sel=document.getElementById('reg-library-select');sel.innerHTML='<option value="">-- 図書館を選択 --</option>'+state.libraries.map(function(l){return'<option value="'+l.id+'">'+esc(l.name)+'</option>';}).join('');}
+  // ウィッシュリスト選択時はボタンラベルを変更
   var btn=document.getElementById('register-btn');
   if(btn){
     if(showWish){
       btn.textContent='♡ ウィッシュリストに追加';
-      var manualTitleEl=document.getElementById('manual-title');
-      var hasTitle=(pendingBook&&pendingBook.title)||(manualTitleEl&&manualTitleEl.value.trim());
-      btn.disabled=hasTitle?false:true;
+      btn.disabled=pendingBook&&pendingBook.title?false:true;
     } else {
       btn.textContent='本を登録する';
     }
@@ -2670,6 +2667,30 @@ function saveModalCover(){
 }
 
 // ── データ管理 ──────────────────────────────────────────────
+function saveGoogleApiKey(){
+  var key=document.getElementById('google-api-key-input').value.trim();
+  if(!key){showToast('APIキーを入力してください');return;}
+  localStorage.setItem('mathapp_google_api_key',key);
+  updateApiKeyStatus();
+  document.getElementById('google-api-key-input').value='';
+  showToast('APIキーを保存しました');
+}
+function clearGoogleApiKey(){
+  localStorage.removeItem('mathapp_google_api_key');
+  document.getElementById('google-api-key-input').value='';
+  updateApiKeyStatus();
+  showToast('APIキーを削除しました');
+}
+function getGoogleApiKey(){
+  return localStorage.getItem('mathapp_google_api_key')||'';
+}
+function updateApiKeyStatus(){
+  var el=document.getElementById('google-api-key-status');
+  if(!el)return;
+  var key=getGoogleApiKey();
+  if(key){el.textContent='✓ 保存済み（末尾: ...'+key.slice(-4)+')';el.style.color='var(--accent2)';}
+  else{el.textContent='（未設定）';el.style.color='var(--text3)';}
+}
 function exportData(){
   const json=JSON.stringify(state,null,2);
   const fname='mathapp_'+today()+'.json';
@@ -2720,6 +2741,7 @@ function importLatest(){
   applyImportData(json);
 }
 function updateLatestBackupUI(){
+  updateApiKeyStatus();
   const date=localStorage.getItem('mathapp_last_backup_date');
   const name=localStorage.getItem('mathapp_last_backup_name');
   const btn=document.getElementById('btn-import-latest');
