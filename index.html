@@ -603,7 +603,8 @@ const NAV=[
 let pendingBook=null, pendingCover=null;
 let modalEditBookId=null, modalCoverTemp=null;
 let historyFilterVal='all';
-let recWeekOffset=0; // グラフ・時間帯の週オフセット（0=今週、-1=先週...）
+let recGraphOffset=0;
+let recTimelineOffset=0;
 let recMonthOffset=0; // カレンダーの月オフセット
 
 // ── デフォルトデータ ─────────────────────────────────────
@@ -1660,6 +1661,12 @@ function addCurrentToWishlist(){
   showToast('ウィッシュリストに追加しました');
 }
 
+function recGraphPrev(){recGraphOffset--;renderRecords();}
+function recGraphNext(){if(recGraphOffset<0){recGraphOffset++;renderRecords();}}
+function recTimelinePrev(){recTimelineOffset--;document.getElementById('rec-timeline').innerHTML=buildTimeline();}
+function recTimelineNext(){if(recTimelineOffset<0){recTimelineOffset++;document.getElementById('rec-timeline').innerHTML=buildTimeline();}}
+function recMonthPrev(){recMonthOffset--;document.getElementById('rec-cal').innerHTML=buildCal();}
+function recMonthNext(){if(recMonthOffset<0){recMonthOffset++;document.getElementById('rec-cal').innerHTML=buildCal();}}
 function buildNavs(){
   SCREENS.forEach(s=>{
     const nav=document.getElementById('nav-'+s);if(!nav)return;
@@ -1667,6 +1674,7 @@ function buildNavs(){
   });
 }
 function gotoScreen(id){
+  if(id!=='records'){recGraphOffset=0;recTimelineOffset=0;recMonthOffset=0;}
   // 図書館画面を離れるときは取消ボタンをリセット
   if(id!=='library'){
     lastLibAction=null;
@@ -2152,7 +2160,7 @@ function renderRecords(){
   const totalMin=state.sessions.reduce((a,s)=>a+sessionMin(s),0);
   const totalDays=new Set(state.sessions.map(s=>s.date)).size;
   const avgMin=totalDays?Math.round(totalMin/totalDays):0;
-  const last7=[];for(let i=6;i>=0;i--){last7.push(localDateOffset(i-recWeekOffset*7));}
+  const last7=[];for(let i=6;i>=0;i--){last7.push(localDateOffset(i-recGraphOffset*7));}
   const barData=last7.map(d=>({date:d,min:state.sessions.filter(s=>s.date===d).reduce((a,s)=>a+sessionMin(s),0)}));
   const maxMin=Math.max(...barData.map(b=>b.min),1);
   const allIds=[...new Set([...state.books.map(b=>b.id),...state.loanHistory.map(b=>b.id),...state.sessions.map(s=>s.bookId)])];
@@ -2190,9 +2198,9 @@ function renderRecords(){
   </div>
   <div id="rec-graph"><div class="chart-wrap">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-    <button onclick="recWeekOffset--;renderRecords();switchRecTab('graph',document.querySelector('#rec-tabs .tab'))" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>
+    <button onclick="recGraphPrev()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>
     <div class="chart-title" style="margin:0;font-size:11px">${last7[0].slice(5).replace('-','/')}〜${last7[6].slice(5).replace('-','/')}</div>
-    <button onclick="if(recWeekOffset<0){recWeekOffset++;renderRecords();switchRecTab('graph',document.querySelector('#rec-tabs .tab'))}" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:${recWeekOffset<0?'var(--text2)':'var(--text3)'}">→</button>
+    <button onclick="recGraphNext()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:${recGraphOffset<0?'var(--text2)':'var(--text3)'}">→</button>
   </div>
   <div style="display:flex;gap:0;align-items:flex-end">
     <div style="display:flex;flex-direction:column;justify-content:space-between;height:${Math.max(80,Math.min(200,Math.round(maxMin/60)*40+40))}px;padding-bottom:20px;margin-right:4px;flex-shrink:0">
@@ -2211,7 +2219,8 @@ function renderRecords(){
 }
 function buildTimeline(){
   var last7=[];
-  for(var ii=6;ii>=0;ii--){last7.push(localDateOffset(ii));}
+  for(var ii=6;ii>=0;ii--){last7.push(localDateOffset(ii-recTimelineOffset*7));}
+  var tlRange=last7[0].slice(5).replace('-','/')+'〜'+last7[6].slice(5).replace('-','/');
 
   var W=320,H=200,padL=28,padT=10,padB=24,padR=8;
   var innerW=W-padL-padR,innerH=H-padT-padB;
@@ -2284,9 +2293,9 @@ function buildTimeline(){
   var dateRangeLabel=last7[0].slice(5).replace('-','/')+'〜'+last7[6].slice(5).replace('-','/');
   return '<div class="timeline-wrap">'
     +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">'
-    +'<button onclick="recWeekOffset--;renderRecords();switchRecTab(\'timeline\',document.querySelectorAll(\'#rec-tabs .tab\')[1])" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>'
-    +'<div class="chart-title" style="margin:0;font-size:11px">'+dateRangeLabel+'</div>'
-    +'<button onclick="if(recWeekOffset<0){recWeekOffset++;renderRecords();switchRecTab(\'timeline\',document.querySelectorAll(\'#rec-tabs .tab\')[1])}" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:'+(recWeekOffset<0?'var(--text2)':'var(--text3)')+'">→</button>'
+    +'<button onclick="recTimelinePrev()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>'
+    +'<div class="chart-title" style="margin:0;font-size:11px">'+tlRange+'</div>'
+    +'<button onclick="recTimelineNext()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:'+(recTimelineOffset<0?'var(--text2)':'var(--text3)')+'">→</button>'
     +'</div>'
     +(hasData?svg:'<div style="text-align:center;padding:32px 0;font-size:13px;color:var(--text3)">開始・終了時刻のある記録がありません</div>')
     +(legend?'<div class="pie-legend" style="margin-top:10px;flex-wrap:wrap;flex-direction:row;gap:6px 12px">'+legend+'</div>':'')
@@ -2303,8 +2312,8 @@ function buildCal(){
   state.sessions.filter(function(s){return s.date.startsWith(yr+'-'+String(mo+1).padStart(2,'0'));})
     .forEach(function(s){sm[s.date]=(sm[s.date]||0)+sessionMin(s);});
   var mx=Math.max.apply(null,Object.values(sm).concat([1]));
-  var prevBtn='<button onclick="recMonthOffset--;renderRecords();switchRecTab(\'cal\',document.querySelectorAll(\'#rec-tabs .tab\')[4])" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>';
-  var nextBtn='<button onclick="if(recMonthOffset<0){recMonthOffset++;renderRecords();switchRecTab(\'cal\',document.querySelectorAll(\'#rec-tabs .tab\')[4])}" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:'+(recMonthOffset<0?'var(--text2)':'var(--text3)')+'">→</button>';
+  var prevBtn='<button onclick="recMonthPrev()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>';
+  var nextBtn='<button onclick="recMonthNext()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:'+(recMonthOffset<0?'var(--text2)':'var(--text3)')+'">→</button>';
   var h='<div class="chart-wrap"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">'+prevBtn+'<div class="chart-title" style="margin:0">'+yr+'年'+(mo+1)+'月</div>'+nextBtn+'</div>'
     +'<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center">';
   ['日','月','火','水','木','金','土'].forEach(function(x){
@@ -2336,9 +2345,14 @@ function buildCal(){
   return h+'</div></div>';
 }
 function switchRecTab(id,btn){
+  // 切り替え先のタブのオフセットのみリセット
+  if(id==='graph')recGraphOffset=0;
+  if(id==='timeline')recTimelineOffset=0;
+  if(id==='cal')recMonthOffset=0;
   document.querySelectorAll('#rec-tabs .tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
   ['graph','timeline','books','list','cal'].forEach(t=>document.getElementById('rec-'+t).style.display=t===id?'':'none');
+  if(id==='graph')renderRecords();
   if(id==='list')renderSessionList();
   if(id==='timeline'){document.getElementById('rec-timeline').innerHTML=buildTimeline();}
   if(id==='cal'){document.getElementById('rec-cal').innerHTML=buildCal();}
