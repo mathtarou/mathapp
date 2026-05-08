@@ -1667,6 +1667,21 @@ function recTimelinePrev(){recTimelineOffset--;document.getElementById('rec-time
 function recTimelineNext(){if(recTimelineOffset<0){recTimelineOffset++;document.getElementById('rec-timeline').innerHTML=buildTimeline();}}
 function recMonthPrev(){recMonthOffset--;document.getElementById('rec-cal').innerHTML=buildCal();}
 function recMonthNext(){if(recMonthOffset<0){recMonthOffset++;document.getElementById('rec-cal').innerHTML=buildCal();}}
+function findBookById(id){
+  var b=state.books.find(function(x){return x.id===id;});
+  if(b)return b;
+  // 返却済み図書館の本
+  if(state.loanHistory){
+    var h=state.loanHistory.find(function(x){return x.id===id;});
+    if(h)return h;
+  }
+  // 所持本の履歴
+  if(state.ownHistory){
+    var oh=state.ownHistory.find(function(x){return x.id===id;});
+    if(oh)return oh;
+  }
+  return null;
+}
 function buildNavs(){
   SCREENS.forEach(s=>{
     const nav=document.getElementById('nav-'+s);if(!nav)return;
@@ -2242,7 +2257,7 @@ function buildTimeline(){
       var barH2=Math.max(y2-y1,3);
       var bx=padL+colIdx*colW+colW*0.15;
       var bw=colW*0.7;
-      var bookIdx=state.books.findIndex(function(bk){return bk.id===s.bookId;});
+      var bookIdx=bookIds.indexOf(s.bookId);
       var barColor=COLORS[bookIdx>=0?bookIdx%COLORS.length:si%COLORS.length];
       svgBars+='<rect x="'+bx.toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+barH2.toFixed(1)+'" rx="2" fill="'+barColor+'" opacity="0.85"/>';
     });
@@ -2282,9 +2297,8 @@ function buildTimeline(){
     if(bookIds.indexOf(s.bookId)<0)bookIds.push(s.bookId);
   });
   var legend=bookIds.map(function(bid,li){
-    var bk=state.books.find(function(x){return x.id===bid;})||{title:'不明',id:0};
-    var bidx=state.books.findIndex(function(x){return x.id===bid;});
-    var lc=COLORS[bidx>=0?bidx%COLORS.length:li%COLORS.length];
+    var bk=findBookById(bid)||{title:'不明',id:0};
+    var lc=COLORS[li%COLORS.length];
     return '<div class="pie-item"><div class="pie-dot" style="background:'+lc+';border-radius:2px"></div><span>'+esc(bk.title.length>12?bk.title.slice(0,12)+'…':bk.title)+'</span></div>';
   }).join('');
 
