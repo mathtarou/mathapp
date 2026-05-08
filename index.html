@@ -589,7 +589,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 </div>
 
 <script>
-const APP_VERSION='2026.05.08-5';
+const APP_VERSION='2026.05.08-15';
 const SCREENS=['shelf','library','study','records','register','history','wish','magazine','wishlist'];
 const COLORS=['#2563eb','#16a34a','#ea580c','#9333ea','#ca8a04','#db2777'];
 const NAV=[
@@ -640,6 +640,10 @@ function load(){
       if(!state.magazines)state.magazines=[];
       if(!state.nextMagId)state.nextMagId=1;
       if(!state.nextWishId)state.nextWishId=1;
+      if(!state.loanHistory)state.loanHistory=[];
+      if(!state.ownHistory)state.ownHistory=[];
+      if(!state.wishlist)state.wishlist=[];
+      if(!state.magazines)state.magazines=[];
       state.books.forEach(b=>{if(b.type==='library'&&b.renewalCount===undefined)b.renewalCount=0;});
       // タイマーが計測中だった場合：elapsed を現在時刻で更新して running 状態を維持
       if(state.timer.running && state.timer.startTime){
@@ -1671,8 +1675,8 @@ function recMonthPrev(){recMonthOffset--;document.getElementById('rec-cal').inne
 function recMonthNext(){if(recMonthOffset<0){recMonthOffset++;document.getElementById('rec-cal').innerHTML=buildCal();}}
 function findBookById(id){
   var b=state.books.find(function(x){return x.id===id;});if(b)return b;
-  if(state.loanHistory){var h=state.loanHistory.find(function(x){return x.id===id;});if(h)return h;}
-  if(state.ownHistory){var oh=state.ownHistory.find(function(x){return x.id===id;});if(oh)return oh;}
+  var h=(state.loanHistory||[]).find(function(x){return x.id===id;});if(h)return h;
+  var oh=(state.ownHistory||[]).find(function(x){return x.id===id;});if(oh)return oh;
   return null;
 }
 function buildNavs(){
@@ -2165,9 +2169,9 @@ function renderRecords(){
   const last7=[];for(let i=6;i>=0;i--){last7.push(localDateOffset(i-recGraphOffset*7));}
   const barData=last7.map(d=>({date:d,min:state.sessions.filter(s=>s.date===d).reduce((a,s)=>a+sessionMin(s),0)}));
   const maxMin=Math.max(...barData.map(b=>b.min),1);
-  const allIds=[...new Set([...state.books.map(b=>b.id),...state.loanHistory.map(b=>b.id),...state.sessions.map(s=>s.bookId)])];
+  const allIds=[...new Set([...state.books.map(b=>b.id),...(state.loanHistory||[]).map(b=>b.id),...state.sessions.map(s=>s.bookId)])];
   const booksChart=allIds.map(id=>{
-    const b=state.books.find(x=>x.id===id)||state.loanHistory.find(x=>x.id===id)||{id,title:'不明',author:'',cover:null};
+    const b=state.books.find(x=>x.id===id)||(state.loanHistory||[]).find(x=>x.id===id)||{id,title:'不明',author:'',cover:null};
     const min=state.sessions.filter(s=>s.bookId===id).reduce((a,s)=>a+sessionMin(s),0);
     return{b,min};
   }).filter(x=>x.min>0).sort((a,b)=>b.min-a.min);
@@ -2206,9 +2210,11 @@ function renderRecords(){
   </div>
   <div style="display:flex;gap:0;align-items:flex-end">
     <div style="display:flex;flex-direction:column;justify-content:space-between;height:${Math.max(80,Math.min(200,Math.round(maxMin/60)*40+40))}px;padding-bottom:20px;margin-right:4px;flex-shrink:0">
-      ${(()=>{const ceil=maxMin<=60?maxMin:maxMin<=120?120:maxMin<=180?180:maxMin<=240?240:maxMin<=300?300:maxMin<=360?360:Math.ceil(maxMin/60)*60;return[...Array(5)].map((_,i)=>{const v=ceil*(4-i)/4;return`<div style="font-size:9px;color:var(--text3);text-align:right;line-height:1">${barLabel(Math.round(v))}</div>`;}).join('');})()}
+      ${(()=>{const ceil=maxMin<=60?maxMin:maxMin<=120?120:maxMin<=180?180:maxMin<=240?240:maxMin<=300?300:maxMin<=360?360:Math.ceil(maxMin/60)*60;return[...Array(5)].map((_,i)=>{const v=ceil*(4-i)/4;return'<div style="font-size:9px;color:var(--text3);text-align:right;line-height:1">'+barLabel(Math.round(v))+'</div>';}).join('');})()}
     </div>
-    <div class="bar-chart" style="flex:1;align-items:flex-end">${barData.map(b=>{const bH=Math.max(80,Math.min(200,Math.round(maxMin/60)*40+40))-20;const h=maxMin>0?Math.round((b.min/maxMin)*bH):0;return`<div class="bar-col"><div class="bar-val">${barLabel(b.min)}</div><div class="bar" style="height:${h}px"></div><div class="bar-lbl">${b.date.slice(5).replace("-","/")}</div></div>`;}).join("")}</div>
+    <div class="bar-chart" style="flex:1;align-items:flex-end">${(()=>{const barH=Math.max(80,Math.min(200,Math.round(maxMin/60)*40+40))-20;return barData.map(b=>{const h=maxMin>0?Math.round((b.min/maxMin)*barH):0;return'<div class="bar-col"><div class="bar-val">'+barLabel(b.min)+'</div><div class="bar" style="height:'+h+'px"></div><div class="bar-lbl">'+b.date.slice(5).replace('-','/')+'</div></div>';}).join('');})()}</div>
+  </div>
+  </div></div>
   <div id="rec-timeline" style="display:none">${buildTimeline()}</div>
   <div id="rec-books" style="display:none">
     <div class="chart-wrap"><div class="chart-title">本別の勉強時間</div>${booksChart.length?`<div class="pie-wrap"><svg width="100" height="100" viewBox="0 0 100 100">${buildPie(booksChart.map(x=>({...x,sec:x.min})),totalPieMin)}</svg><div class="pie-legend">${booksChart.map((x,i)=>`<div class="pie-item"><div class="pie-dot" style="background:${COLORS[i%COLORS.length]}"></div><span>${x.b.title.length>9?x.b.title.slice(0,9)+'…':esc(x.b.title)} ${(Math.round(x.min/60*10)/10).toFixed(1)}h</span></div>`).join('')}</div></div>`:''}</div>
@@ -2226,6 +2232,10 @@ function buildTimeline(){
   var innerW=W-padL-padR,innerH=H-padT-padB;
   var colW=innerW/7;
 
+  var bookIds=[];
+  state.sessions.filter(function(s){return last7.indexOf(s.date)>=0&&s.startTime;}).forEach(function(s){
+    if(bookIds.indexOf(s.bookId)<0)bookIds.push(s.bookId);
+  });
   var svgBars='';
   last7.forEach(function(date,colIdx){
     var daySessions=state.sessions.filter(function(s){return s.date===date&&s.startTime&&s.endTime;});
@@ -2277,10 +2287,7 @@ function buildTimeline(){
   var svg='<svg class="timeline-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">'
     +todayHl+timeLabels+svgBars+dateLabels+'</svg>';
 
-  var bookIds=[];
-  state.sessions.filter(function(s){return last7.indexOf(s.date)>=0&&s.startTime;}).forEach(function(s){
-    if(bookIds.indexOf(s.bookId)<0)bookIds.push(s.bookId);
-  });
+
   var legend=bookIds.map(function(bid,li){
     var bk=findBookById(bid)||{title:'不明',id:0};
     var lc=COLORS[li%COLORS.length];
