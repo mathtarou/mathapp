@@ -589,7 +589,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 </div>
 
 <script>
-const APP_VERSION='2026.05.08-2';
+const APP_VERSION='2026.05.08-3';
 const SCREENS=['shelf','library','study','records','register','history','wish','magazine','wishlist'];
 const COLORS=['#2563eb','#16a34a','#ea580c','#9333ea','#ca8a04','#db2777'];
 const NAV=[
@@ -2244,7 +2244,7 @@ function buildTimeline(){
       var barH2=Math.max(y2-y1,3);
       var bx=padL+colIdx*colW+colW*0.15;
       var bw=colW*0.7;
-      var bookIdx=state.books.findIndex(function(bk){return bk.id===s.bookId;});
+      var bookIdx=bookIds.indexOf(s.bookId);
       var barColor=COLORS[bookIdx>=0?bookIdx%COLORS.length:si%COLORS.length];
       svgBars+='<rect x="'+bx.toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+barH2.toFixed(1)+'" rx="2" fill="'+barColor+'" opacity="0.85"/>';
     });
@@ -2284,9 +2284,8 @@ function buildTimeline(){
     if(bookIds.indexOf(s.bookId)<0)bookIds.push(s.bookId);
   });
   var legend=bookIds.map(function(bid,li){
-    var bk=state.books.find(function(x){return x.id===bid;})||{title:'不明',id:0};
-    var bidx=state.books.findIndex(function(x){return x.id===bid;});
-    var lc=COLORS[bidx>=0?bidx%COLORS.length:li%COLORS.length];
+    var bk=findBookById(bid)||{title:'不明',id:0};
+    var lc=COLORS[li%COLORS.length];
     return '<div class="pie-item"><div class="pie-dot" style="background:'+lc+';border-radius:2px"></div><span>'+esc(bk.title.length>12?bk.title.slice(0,12)+'…':bk.title)+'</span></div>';
   }).join('');
 
