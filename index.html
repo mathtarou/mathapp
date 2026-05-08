@@ -425,6 +425,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 
     <!-- データ管理 -->
     <div id="reg-data" style="display:none">
+      <div style="font-size:12px;color:var(--text3);padding:4px 0 12px">バージョン: <span id="app-version-display" style="font-weight:600;color:var(--text2)"></span></div>
       <div class="sec-label">バックアップ</div>
       <div class="reg-card">
         <div class="reg-card-title">データをエクスポート</div>
@@ -588,6 +589,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 </div>
 
 <script>
+const APP_VERSION='2026.05.08-2';
 const SCREENS=['shelf','library','study','records','register','history','wish','magazine','wishlist'];
 const COLORS=['#2563eb','#16a34a','#ea580c','#9333ea','#ca8a04','#db2777'];
 const NAV=[
@@ -1668,18 +1670,9 @@ function recTimelineNext(){if(recTimelineOffset<0){recTimelineOffset++;document.
 function recMonthPrev(){recMonthOffset--;document.getElementById('rec-cal').innerHTML=buildCal();}
 function recMonthNext(){if(recMonthOffset<0){recMonthOffset++;document.getElementById('rec-cal').innerHTML=buildCal();}}
 function findBookById(id){
-  var b=state.books.find(function(x){return x.id===id;});
-  if(b)return b;
-  // 返却済み図書館の本
-  if(state.loanHistory){
-    var h=state.loanHistory.find(function(x){return x.id===id;});
-    if(h)return h;
-  }
-  // 所持本の履歴
-  if(state.ownHistory){
-    var oh=state.ownHistory.find(function(x){return x.id===id;});
-    if(oh)return oh;
-  }
+  var b=state.books.find(function(x){return x.id===id;});if(b)return b;
+  if(state.loanHistory){var h=state.loanHistory.find(function(x){return x.id===id;});if(h)return h;}
+  if(state.ownHistory){var oh=state.ownHistory.find(function(x){return x.id===id;});if(oh)return oh;}
   return null;
 }
 function buildNavs(){
@@ -2126,22 +2119,16 @@ function timerStop(){
     const book=state.books.find(b=>b.id===state.timer.bookId);
     if(book)book.studyHours=Math.round((book.studyHours+durationMin/60)*100)/100;
   }
-  // 0時をまたぐ場合は2セッションに分割
-  var _sd=new Date(startTime);
-  var _ed=new Date(endTime);
+  var _sd=new Date(startTime);var _ed=new Date(endTime);
   var _off=_sd.getTimezoneOffset();
-  var _sdL=new Date(_sd.getTime()-_off*60000);
-  var _edL=new Date(_ed.getTime()-_off*60000);
-  var _dateS=_sdL.toISOString().slice(0,10);
-  var _dateE=_edL.toISOString().slice(0,10);
+  var _sdL=new Date(_sd.getTime()-_off*60000);var _edL=new Date(_ed.getTime()-_off*60000);
+  var _dateS=_sdL.toISOString().slice(0,10);var _dateE=_edL.toISOString().slice(0,10);
   if(_dateS===_dateE){
     state.sessions.push({id:state.nextSessionId++,bookId:state.timer.bookId,date:_dateS,startTime:startTime,endTime:endTime,duration:durationMin*60,durationMin:durationMin});
   } else {
-    // 翌日ローカル0時のUTC時刻を計算
     var _mnL=new Date(_dateS);_mnL.setDate(_mnL.getDate()+1);
     var _mnUTC=new Date(_mnL.getTime()+_off*60000);
-    var _min1=Math.round((_mnUTC-_sd)/60000);
-    var _min2=Math.round((_ed-_mnUTC)/60000);
+    var _min1=Math.round((_mnUTC-_sd)/60000);var _min2=Math.round((_ed-_mnUTC)/60000);
     if(_min1>=1)state.sessions.push({id:state.nextSessionId++,bookId:state.timer.bookId,date:_dateS,startTime:startTime,endTime:_mnUTC.toISOString(),duration:_min1*60,durationMin:_min1});
     if(_min2>=1)state.sessions.push({id:state.nextSessionId++,bookId:state.timer.bookId,date:_dateE,startTime:_mnUTC.toISOString(),endTime:endTime,duration:_min2*60,durationMin:_min2});
   }
@@ -2257,7 +2244,7 @@ function buildTimeline(){
       var barH2=Math.max(y2-y1,3);
       var bx=padL+colIdx*colW+colW*0.15;
       var bw=colW*0.7;
-      var bookIdx=bookIds.indexOf(s.bookId);
+      var bookIdx=state.books.findIndex(function(bk){return bk.id===s.bookId;});
       var barColor=COLORS[bookIdx>=0?bookIdx%COLORS.length:si%COLORS.length];
       svgBars+='<rect x="'+bx.toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+barH2.toFixed(1)+'" rx="2" fill="'+barColor+'" opacity="0.85"/>';
     });
@@ -2297,14 +2284,15 @@ function buildTimeline(){
     if(bookIds.indexOf(s.bookId)<0)bookIds.push(s.bookId);
   });
   var legend=bookIds.map(function(bid,li){
-    var bk=findBookById(bid)||{title:'不明',id:0};
-    var lc=COLORS[li%COLORS.length];
+    var bk=state.books.find(function(x){return x.id===bid;})||{title:'不明',id:0};
+    var bidx=state.books.findIndex(function(x){return x.id===bid;});
+    var lc=COLORS[bidx>=0?bidx%COLORS.length:li%COLORS.length];
     return '<div class="pie-item"><div class="pie-dot" style="background:'+lc+';border-radius:2px"></div><span>'+esc(bk.title.length>12?bk.title.slice(0,12)+'…':bk.title)+'</span></div>';
   }).join('');
 
   var hasData=state.sessions.some(function(s){return last7.indexOf(s.date)>=0&&s.startTime&&s.endTime;});
 
-  var dateRangeLabel=last7[0].slice(5).replace('-','/')+'〜'+last7[6].slice(5).replace('-','/');
+  var tlRange=last7[0].slice(5).replace('-','/')+'〜'+last7[6].slice(5).replace('-','/');
   return '<div class="timeline-wrap">'
     +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">'
     +'<button onclick="recTimelinePrev()" style="border:none;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--r-sm);padding:4px 10px;font-size:13px;cursor:pointer;color:var(--text2)">←</button>'
@@ -2359,7 +2347,6 @@ function buildCal(){
   return h+'</div></div>';
 }
 function switchRecTab(id,btn){
-  // 切り替え先のタブのオフセットのみリセット
   if(id==='graph')recGraphOffset=0;
   if(id==='timeline')recTimelineOffset=0;
   if(id==='cal')recMonthOffset=0;
@@ -2844,28 +2831,137 @@ function exportCSV(){
 
 // ── 履歴 ──────────────────────────────────────────────────
 function renderHistory(){
-  const loanAll=[...state.loanHistory,...state.books.filter(b=>b.type==='library').map(b=>({...b,status:'active'}))];
-  const ownAll=state.books.filter(b=>b.type==='own').map(b=>({...b,status:'own'}));
-  const allItems=[...loanAll.map(b=>({...b,_kind:'loan'})),...ownAll.map(b=>({...b,_kind:'own'}))].sort((a,b)=>{const da=a.loanDate||a.acquiredDate||'';const db=b.loanDate||b.acquiredDate||'';return db.localeCompare(da);});
-  const filtered=historyFilterVal==='all'?allItems
-    :historyFilterVal==='own'?allItems.filter(x=>x._kind==='own')
-    :historyFilterVal==='loan'?allItems.filter(x=>x._kind==='loan')
-    :allItems.filter(x=>x._kind==='loan'&&x.status==='returned');
-  document.getElementById('history-sub').textContent=`全${filtered.length}件`;
-  document.getElementById('history-filters').innerHTML=['all','own','loan','returned'].map(f=>`<button class="filter-btn${historyFilterVal===f?' active':''}" onclick="setHistoryFilter('${f}')">${f==='all'?'すべて':f==='own'?'所持本':f==='loan'?'図書館':'返却済'}</button>`).join('');
-  const el=document.getElementById('history-list');
-  if(!filtered.length){el.innerHTML='<div class="empty">履歴がありません</div>';return}
-  el.innerHTML=filtered.map(b=>{
-    const lib=state.libraries.find(l=>l.id===b.libraryId);
-    const badge=b._kind==='own'?'<span class="badge badge-gray">所持</span>':b.status==='returned'?'<span class="badge badge-green">返却済</span>':'<span class="badge badge-blue">貸出中</span>';
-    const sub=b._kind==='loan'?(lib?lib.name:'図書館'):'購入・所持';
-    const dateStr=b._kind==='loan'?`貸出: ${b.loanDate||'-'}　期限: ${b.dueDate||'-'}${b.returnedDate?' 返却: '+b.returnedDate:''}`:`入手: ${b.acquiredDate||'-'}`;
-    return`<div class="card"><div class="book-row">${coverEl(b)}<div class="book-info"><div class="book-title">${esc(b.title)}</div><div class="book-sub">${esc(sub)}</div><div class="book-sub">${dateStr}</div><div class="badges">${badge}<span class="badge badge-blue">${fmtH(b.studyHours)}</span></div></div></div></div>`;
+  // 図書館の本を本ごとにグループ化
+  var loanGroups={};
+  (state.loanHistory||[]).forEach(function(b){
+    var key=b.isbn?('isbn:'+b.isbn):('id:'+b.id);
+    if(!loanGroups[key]){loanGroups[key]={book:{...b},records:[]};}
+    loanGroups[key].records.push({libraryId:b.libraryId,loanDate:b.loanDate,dueDate:b.dueDate,returnedDate:b.returnedDate,status:b.status||'returned',studyHours:b.studyHours||0});
+  });
+  state.books.filter(function(b){return b.type==='library';}).forEach(function(b){
+    var key=b.isbn?('isbn:'+b.isbn):('id:'+b.id);
+    if(!loanGroups[key]){loanGroups[key]={book:{...b},records:[]};}
+    loanGroups[key].records.push({libraryId:b.libraryId,loanDate:b.loanDate,dueDate:b.dueDate,returnedDate:null,status:'active',studyHours:b.studyHours||0});
+  });
+
+  var loanItems=Object.values(loanGroups).map(function(g){
+    var records=g.records;
+    var sorted=records.slice().sort(function(a,b){return (b.loanDate||'').localeCompare(a.loanDate||'');});
+    var latest=sorted[0];
+    var allReturned=records.every(function(r){return r.status!=='active';});
+    var status=allReturned?'returned':'active';
+    var latestReturn=allReturned?records.filter(function(r){return r.returnedDate;}).sort(function(a,b){return (b.returnedDate||'').localeCompare(a.returnedDate||'');})[0]:null;
+    var totalStudy=records.reduce(function(a,r){return a+(r.studyHours||0);},0);
+    var ownedNow=state.books.some(function(b){return b.isbn&&b.isbn===g.book.isbn&&b.type==='own';});
+    return Object.assign({},g.book,{_kind:'loan',status:status,loanDate:latest.loanDate,returnedDate:latestReturn?latestReturn.returnedDate:null,studyHours:totalStudy,_records:records,_ownedNow:ownedNow});
+  });
+
+  var ownItems=state.books.filter(function(b){return b.type==='own';}).map(function(b){return Object.assign({},b,{_kind:'own',status:'own'});});
+
+  var allItems=loanItems.concat(ownItems).sort(function(a,b){
+    var da=a.loanDate||a.acquiredDate||'';var db=b.loanDate||b.acquiredDate||'';return db.localeCompare(da);
+  });
+
+  var filtered=historyFilterVal==='all'?allItems
+    :historyFilterVal==='own'?allItems.filter(function(x){return x._kind==='own';})
+    :historyFilterVal==='loan'?allItems.filter(function(x){return x._kind==='loan';})
+    :allItems.filter(function(x){return x._kind==='loan'&&x.status==='returned';});
+
+  document.getElementById('history-sub').textContent='全'+filtered.length+'件';
+  document.getElementById('history-filters').innerHTML=['all','own','loan','returned'].map(function(f){
+    return '<button class="filter-btn'+(historyFilterVal===f?' active':'')+'" onclick="setHistoryFilter(\''+f+'\')">'+({all:'すべて',own:'所持本',loan:'図書館',returned:'返却済'}[f])+'</button>';
   }).join('');
+
+  var el=document.getElementById('history-list');
+  if(!filtered.length){el.innerHTML='<div class="empty">履歴がありません</div>';return;}
+  el.innerHTML='';
+
+  filtered.forEach(function(b){
+    var card=document.createElement('div');
+    card.className='card';
+    card.style.cssText='margin-bottom:8px;cursor:'+(b._kind==='loan'?'pointer':'default');
+
+    var badge=b._kind==='own'
+      ?'<span class="badge badge-gray">所持</span>'
+      :b._ownedNow?'<span class="badge badge-gray">所持済</span>'
+      :b.status==='returned'?'<span class="badge badge-green">返却済</span>'
+      :'<span class="badge badge-blue">貸出中</span>';
+
+    var sub=b._kind==='loan'?'図書館':'購入・所持';
+    var dateStr=b._kind==='loan'
+      ?'貸出: '+(b.loanDate||'-')+(b.status==='returned'&&b.returnedDate?' 返却: '+b.returnedDate:'')
+      :'入手: '+(b.acquiredDate||'-');
+
+    var alreadyOwn=b._ownedNow||state.books.some(function(bk){return bk.isbn&&bk.isbn===b.isbn&&bk.type==='own';});
+    var showRegBtn=b._kind==='loan'&&b.status==='returned'&&!alreadyOwn;
+
+    card.innerHTML='<div class="book-row">'+coverEl(b)
+      +'<div class="book-info">'
+      +'<div class="book-title">'+esc(b.title)+'</div>'
+      +'<div class="book-sub">'+esc(sub)+'</div>'
+      +'<div class="book-sub">'+dateStr+'</div>'
+      +'<div class="badges">'+badge+'<span class="badge badge-blue">'+fmtH(b.studyHours)+'</span></div>'
+      +'</div></div>';
+
+    if(showRegBtn){
+      var btn=document.createElement('button');
+      btn.textContent='登録';
+      btn.style.cssText='border:1px solid var(--accent-border);background:var(--accent-dim);border-radius:var(--r-sm);padding:4px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--accent);margin:4px 12px 10px';
+      btn.onclick=(function(isbn){return function(e){e.stopPropagation();reRegisterBook(isbn);};})(b.isbn);
+      card.appendChild(btn);
+    }
+
+    if(b._kind==='loan'){
+      card.onclick=function(){showHistoryDetail(b);};
+    }
+    el.appendChild(card);
+  });
+}
+
+function showHistoryDetail(b){
+  var modal=document.getElementById('history-detail-modal');
+  if(!modal){
+    modal=document.createElement('div');
+    modal.id='history-detail-modal';
+    modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:flex-end;justify-content:center';
+    modal.onclick=function(e){if(e.target===modal)closeHistoryDetail();};
+    document.body.appendChild(modal);
+  }
+  var records=(b._records||[]).slice().sort(function(a,c){return (a.loanDate||'').localeCompare(c.loanDate||'');});
+  var rows=records.map(function(r){
+    var lib=(state.libraries||[]).find(function(l){return l.id===r.libraryId;});
+    return '<div style="background:var(--bg3);border-radius:var(--r-sm);padding:8px 10px;font-size:12px;margin-bottom:6px">'
+      +'<div style="font-weight:600;margin-bottom:2px">'+(lib?esc(lib.name):'図書館')+'</div>'
+      +'<div style="color:var(--text2)">貸出: '+(r.loanDate||'-')+'</div>'
+      +(r.returnedDate?'<div style="color:var(--text2)">返却: '+r.returnedDate+'</div>':'<div style="color:var(--accent)">貸出中</div>')
+      +'</div>';
+  }).join('');
+  var ownRow=b._ownedNow?'<div style="background:var(--accent2-dim);border:1px solid var(--accent2-border);border-radius:var(--r-sm);padding:8px 10px;font-size:12px;font-weight:600;color:var(--accent2);margin-bottom:6px">購入・所持済み</div>':'';
+  modal.innerHTML='<div style="background:var(--bg2);border-radius:16px 16px 0 0;width:100%;max-width:480px;max-height:80vh;overflow-y:auto;padding:16px">'
+    +'<div style="font-size:16px;font-weight:700;margin-bottom:4px">'+esc(b.title)+'</div>'
+    +'<div style="font-size:12px;color:var(--text2);margin-bottom:12px">合計: '+fmtH(b.studyHours)+'</div>'
+    +'<div style="font-size:13px;font-weight:600;margin-bottom:8px">貸出履歴</div>'
+    +rows+ownRow
+    +'<button onclick="closeHistoryDetail()" style="width:100%;padding:10px;border:none;background:var(--bg3);border-radius:var(--r-sm);font-size:14px;font-family:inherit;cursor:pointer;margin-top:4px">閉じる</button>'
+    +'</div>';
+  modal.style.display='flex';
+}
+
+function closeHistoryDetail(){
+  var m=document.getElementById('history-detail-modal');if(m)m.style.display='none';
+}
+
+function reRegisterBook(isbn){
+  gotoScreen('register');
+  setTimeout(function(){
+    var input=document.getElementById('isbn-input');
+    if(input){input.value=isbn||'';lookupISBN();}
+  },100);
 }
 function setHistoryFilter(f){historyFilterVal=f;renderHistory();}
 
 buildNavs();
+var _vd=document.getElementById('app-version-display');if(_vd)_vd.textContent=APP_VERSION;
 // 計測中だった場合はタイマー画面を自動表示
 if(state.timer.running && state.timer.bookId){
   gotoScreen('study');
