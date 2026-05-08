@@ -589,7 +589,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 </div>
 
 <script>
-const APP_VERSION='2026.05.08-4';
+const APP_VERSION='2026.05.08-5';
 const SCREENS=['shelf','library','study','records','register','history','wish','magazine','wishlist'];
 const COLORS=['#2563eb','#16a34a','#ea580c','#9333ea','#ca8a04','#db2777'];
 const NAV=[
@@ -2206,7 +2206,7 @@ function renderRecords(){
   </div>
   <div style="display:flex;gap:0;align-items:flex-end">
     <div style="display:flex;flex-direction:column;justify-content:space-between;height:${Math.max(80,Math.min(200,Math.round(maxMin/60)*40+40))}px;padding-bottom:20px;margin-right:4px;flex-shrink:0">
-      ${(()=>{const ceil=maxMin<=60?maxMin:maxMin<=120?120:maxMin<=180?180:maxMin<=240?240:maxMin<=300?300:maxMin<=360?360:Math.ceil(maxMin/60)*60;return[...Array(5)].map((_,i)=>{const v=ceil*(4-i)/4;return'<div style="font-size:9px;color:var(--text3);text-align:right;line-height:1">'+barLabel(Math.round(v))+'</div>';}).join('');})()}
+      ${(()=>{const ceil=maxMin<=60?maxMin:maxMin<=120?120:maxMin<=180?180:maxMin<=240?240:maxMin<=300?300:maxMin<=360?360:Math.ceil(maxMin/60)*60;return[...Array(5)].map((_,i)=>{const v=ceil*(4-i)/4;return`<div style="font-size:9px;color:var(--text3);text-align:right;line-height:1">${barLabel(Math.round(v))}</div>`;}).join('');})()}
     </div>
     <div class="bar-chart" style="flex:1;align-items:flex-end">${barData.map(b=>{const bH=Math.max(80,Math.min(200,Math.round(maxMin/60)*40+40))-20;const h=maxMin>0?Math.round((b.min/maxMin)*bH):0;return`<div class="bar-col"><div class="bar-val">${barLabel(b.min)}</div><div class="bar" style="height:${h}px"></div><div class="bar-lbl">${b.date.slice(5).replace("-","/")}</div></div>`;}).join("")}</div>
   <div id="rec-timeline" style="display:none">${buildTimeline()}</div>
