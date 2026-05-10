@@ -589,7 +589,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 
 </div>
 
 <script>
-const APP_VERSION='2026.05.08-15';
+const APP_VERSION='2026.05.10-2';
 const SCREENS=['shelf','library','study','records','register','history','wish','magazine','wishlist'];
 const COLORS=['#2563eb','#16a34a','#ea580c','#9333ea','#ca8a04','#db2777'];
 const NAV=[
@@ -1543,7 +1543,6 @@ function renderWishlistScreen(){
   var mags=state.wishlist.filter(function(w){return w.type==='magazine';});
   document.getElementById('wishlist-sub').textContent=books.length+'冊 · 雑誌'+mags.length+'件';
 
-  // フィルターボタン
   var filterRow=document.getElementById('wishlist-filter-row');
   if(filterRow){
     filterRow.innerHTML='';
@@ -1564,7 +1563,7 @@ function renderWishlistScreen(){
 
   var el=document.getElementById('wishlist-content');
   if(!items.length){
-    el.innerHTML='<div class="empty">ウィッシュリストは空です<br><small style="font-size:12px;color:var(--text3)">本棚→ISBN検索、または「探す」から追加できます</small></div>';
+    el.innerHTML='<div class="empty">ウィッシュリストは空です</div>';
     return;
   }
 
@@ -1574,66 +1573,228 @@ function renderWishlistScreen(){
     var inShelf=!isMag&&state.books.some(function(b){return b.isbn===w.isbn;});
     var card=document.createElement('div');
     card.className='card';
-    card.style.marginBottom='8px';
+    card.style.cssText='margin-bottom:8px;cursor:pointer';
 
-    // 書影
     var coverHtml=isMag
-      ?('<div style="width:64px;height:90px;border-radius:2px;flex-shrink:0;background:'+(w.magazine==='数学セミナー'?'#2563eb':'#7c3aed')+';display:flex;align-items:center;justify-content:center;padding:4px"><div style="font-size:8px;color:#fff;font-weight:700;text-align:center;line-height:1.4">'+esc(w.magazine==='数学セミナー'?'数学\nセミナー':'数理\n科学')+'</div></div>')
+      ?('<div style="width:56px;height:80px;border-radius:2px;flex-shrink:0;background:'+(w.magazine==='数学セミナー'?'#2563eb':'#7c3aed')+';display:flex;align-items:center;justify-content:center;padding:4px"><div style="font-size:7px;color:#fff;font-weight:700;text-align:center;line-height:1.4">'+esc(w.magazine==='数学セミナー'?'数学\nセミナー':'数理\n科学')+'</div></div>')
       :w.cover
-        ?('<img src="'+w.cover.replace('http://','https://')+'" style="width:64px;height:90px;object-fit:cover;border-radius:2px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15)">')
-        :('<div class="book-cover-ph" style="width:64px;height:90px;background:'+COLORS[((w.dbId||w.id)||0)%COLORS.length]+'">'+esc((w.title||'').slice(0,4))+'</div>');
+        ?('<img src="'+w.cover.replace('http://','https://')+'" style="width:56px;height:80px;object-fit:cover;border-radius:2px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15)">')
+        :('<div class="book-cover-ph" style="width:56px;height:80px;font-size:10px;background:'+COLORS[((w.id)||0)%COLORS.length]+'">'+esc((w.title||'').slice(0,4))+'</div>');
 
     var mainTitle=isMag?(w.issue+(w.tokushu?' 特集：'+w.tokushu:'')):(w.title||'');
-    var sub1=isMag?(w.magazine+' '+(w.number||'')):(w.author?cleanAuthor(w.author):'');
-    var sub2=isMag?(w.publisher||''):(w.publisher||'')+(w.series?' · '+w.series:'');
+    var sub1=isMag?(w.magazine+' '+(w.number||'')):(w.author?w.author:'');
+    var hasLib=(w.libraries||[]).length>0;
 
     card.innerHTML=
-      '<div style="display:flex;gap:12px;padding:12px;align-items:flex-start">'
+      '<div style="display:flex;gap:10px;padding:12px;align-items:flex-start">'
       +coverHtml
       +'<div style="flex:1;min-width:0">'
       +'<div class="book-title">'+esc(mainTitle)+'</div>'
       +'<div class="book-sub" style="margin-top:2px">'+esc(sub1)+'</div>'
-      +'<div style="font-size:11px;color:var(--text3);margin-bottom:5px">'+esc(sub2)+'</div>'
-      +'<div style="display:flex;flex-wrap:wrap;gap:3px">'
+      +'<div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:4px">'
       +(isMag?'<span class="badge badge-blue" style="font-size:9px">雑誌</span>':'')
-      +(w.lang==='en'?'<span class="badge badge-amber" style="font-size:9px">洋書</span>':'')
       +(inShelf?'<span class="badge badge-green" style="font-size:9px">登録済</span>':'')
-      +(w.addedDate?'<span class="badge badge-gray" style="font-size:9px">追加: '+w.addedDate+'</span>':'')
+      +(hasLib?'<span class="badge badge-gray" style="font-size:9px">📍所蔵情報あり</span>':'')
       +'</div>'
       +'</div>'
-      +'<div style="flex-shrink:0;display:flex;flex-direction:column;gap:6px" id="wl-btn-'+w.id+'"></div>'
       +'</div>';
-    el.appendChild(card);
 
-    // ボタン
-    var btnDiv=card.querySelector('#wl-btn-'+w.id);
+    // タップで詳細モーダル
+    card.onclick=function(){showWishDetail(w);};
+
+    // ボタン行
+    var btnRow=document.createElement('div');
+    btnRow.style.cssText='display:flex;gap:6px;padding:0 12px 10px;flex-wrap:wrap';
+
+    // 未所持の場合は登録ボタン
     if(!inShelf&&!isMag){
       var btnReg=document.createElement('button');
-      btnReg.style.cssText='border:1px solid var(--accent2-border);background:var(--accent2-dim);border-radius:var(--r-sm);padding:5px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--accent2);white-space:nowrap';
+      btnReg.style.cssText='border:1px solid var(--accent-border);background:var(--accent-dim);border-radius:var(--r-sm);padding:4px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--accent)';
       btnReg.textContent='登録';
-      btnReg.onclick=(function(wish){return function(){registerFromWish(wish);};})(w);
-      btnDiv.appendChild(btnReg);
+      btnReg.onclick=(function(wish){return function(e){e.stopPropagation();registerFromWish(wish);};})(w);
+      btnRow.appendChild(btnReg);
     }
-    if(isMag){
-      var inMagList=(state.magazines||[]).some(function(m){return m.dbId===w.dbId;});
-      if(!inMagList){
-        var btnMag=document.createElement('button');
-        btnMag.style.cssText='border:1px solid var(--accent-border);background:var(--accent-dim);border-radius:var(--r-sm);padding:5px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--accent);white-space:nowrap';
-        btnMag.textContent='登録';
-        btnMag.onclick=(function(wish){return function(){
-          if(wishDB){var dbItem=wishDB.find(function(x){return x.id===wish.dbId;});if(dbItem)showMagRegModal(dbItem);}
-        };})(w);
-        btnDiv.appendChild(btnMag);
-      }
+
+    // 図書館を追加ボタン（本のみ）
+    if(!isMag){
+      var btnAddLib=document.createElement('button');
+      btnAddLib.style.cssText='border:1px solid var(--border2);background:var(--bg3);border-radius:var(--r-sm);padding:4px 10px;font-size:11px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--text2)';
+      btnAddLib.textContent='追加';
+      btnAddLib.onclick=(function(wish){return function(e){e.stopPropagation();showWishAddLib(wish);};})(w);
+      btnRow.appendChild(btnAddLib);
     }
-    var btnDel=document.createElement('button');
-    btnDel.style.cssText='border:none;background:none;cursor:pointer;color:var(--danger);font-size:11px;font-family:inherit;padding:2px 0';
-    btnDel.textContent='削除';
-    btnDel.onclick=(function(wid){return function(){removeWishById(wid);renderWishlistScreen();};})(w.id);
-    btnDiv.appendChild(btnDel);
+
+    card.appendChild(btnRow);
+
+    el.appendChild(card);
   });
 }
 
+function showWishDetail(w){
+  var modal=document.getElementById('wish-detail-modal');
+  if(!modal){
+    modal=document.createElement('div');
+    modal.id='wish-detail-modal';
+    modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:flex-end;justify-content:center';
+    modal.onclick=function(e){if(e.target===modal)closeWishDetail();};
+    document.body.appendChild(modal);
+  }
+  modal.dataset.wishId=w.id;
+  renderWishDetailContent(w, modal);
+  modal.style.display='flex';
+}
+
+function renderWishDetailContent(w, modal){
+  if(!modal)modal=document.getElementById('wish-detail-modal');
+  if(!modal)return;
+  var libs=state.libraries||[];
+
+  // 所蔵情報
+  var libRows=(w.libraries||[]).map(function(l,li){
+    var libName=libs.find(function(x){return x.id===l.libraryId;})||{name:l.libraryName||'不明'};
+    var floorStr=l.floor?l.floor+'F':'';
+    var callStr=l.callNumber?formatCallNumber(l.callNumber):'';
+    return '<div style="background:var(--bg3);border-radius:var(--r-sm);padding:8px 10px;font-size:12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:8px">'
+      +'<div style="display:flex;gap:10px;align-items:center;flex:1;min-width:0;flex-wrap:wrap">'
+      +'<span style="font-weight:600;white-space:nowrap">'+esc(libName.name||l.libraryName||'不明')+'</span>'
+      +(floorStr?'<span style="color:var(--text2);white-space:nowrap">'+floorStr+'</span>':'')
+      +(callStr?'<span style="color:var(--text2)">'+esc(callStr)+'</span>':'')
+      +'</div>'
+      +'<button onclick="removeWishLibrary('+w.id+','+li+')" style="border:none;background:none;cursor:pointer;color:var(--danger);font-size:11px;font-family:inherit;padding:2px 4px;flex-shrink:0">削除</button>'
+      +'</div>';
+  }).join('');
+
+  modal.innerHTML='<div style="background:var(--bg2);border-radius:16px 16px 0 0;width:100%;max-width:480px;max-height:85vh;overflow-y:auto;padding:16px">'
+    +'<div style="font-size:16px;font-weight:700;margin-bottom:4px">'+esc(w.title||'')+'</div>'
+    +'<div style="font-size:12px;color:var(--text2);margin-bottom:2px">'+esc(w.author||'')+'</div>'
+    +'<div style="font-size:12px;color:var(--text3);margin-bottom:12px">'+esc(w.publisher||'')+(w.isbn?' · ISBN: '+w.isbn:'')+'</div>'
+
+    // 編集ボタン
+    +'<button onclick="openWishEdit('+w.id+')" style="border:1px solid var(--border2);background:var(--bg3);border-radius:var(--r-sm);padding:5px 12px;font-size:12px;font-family:inherit;cursor:pointer;color:var(--text2);margin-bottom:12px">✏️ 書誌情報を編集</button>'
+
+    // 所蔵情報
+    +'<div style="font-size:13px;font-weight:600;margin-bottom:8px">図書館所蔵情報</div>'
+    +(libRows||'<div style="font-size:12px;color:var(--text3);margin-bottom:8px">所蔵情報なし</div>')
+
+
+
+    +'<button onclick="closeWishDetail()" style="width:100%;padding:10px;border:none;background:var(--bg3);border-radius:var(--r-sm);font-size:14px;font-family:inherit;cursor:pointer">閉じる</button>'
+    +'</div>';
+}
+
+function showWishAddLib(w){
+  var modal=document.getElementById('wish-addlib-modal');
+  if(!modal){
+    modal=document.createElement('div');
+    modal.id='wish-addlib-modal';
+    modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:210;display:flex;align-items:flex-end;justify-content:center';
+    modal.onclick=function(e){if(e.target===modal)closeWishAddLib();};
+    document.body.appendChild(modal);
+  }
+  var libs=state.libraries||[];
+  modal.innerHTML='<div style="background:var(--bg2);border-radius:16px 16px 0 0;width:100%;max-width:480px;padding:16px">'
+    +'<div style="font-size:15px;font-weight:700;margin-bottom:4px">図書館を追加</div>'
+    +'<div style="font-size:12px;color:var(--text2);margin-bottom:12px">'+esc(w.title||'')+'</div>'
+    +'<div style="display:flex;flex-direction:column;gap:8px">'
+    +'<select id="addlib-lib-select" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2);font-family:inherit">'
+    +'<option value="">図書館を選択</option>'
+    +libs.map(function(l){return '<option value="'+l.id+'">'+esc(l.name)+'</option>';}).join('')
+    +'</select>'
+    +'<input type="number" id="addlib-floor" placeholder="階数（例: 3）" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2)">'
+    +'<input type="text" id="addlib-call" placeholder="請求記号（例: 417.1, DU）" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2)">'
+    +'<button onclick="doAddWishLib('+w.id+')" style="border:none;background:var(--accent);color:#fff;border-radius:var(--r-sm);padding:10px;font-size:14px;font-family:inherit;cursor:pointer;font-weight:600">追加</button>'
+    +'<button onclick="closeWishAddLib()" style="border:none;background:var(--bg3);border-radius:var(--r-sm);padding:10px;font-size:14px;font-family:inherit;cursor:pointer">キャンセル</button>'
+    +'</div></div>';
+  modal.style.display='flex';
+}
+
+function closeWishAddLib(){
+  var m=document.getElementById('wish-addlib-modal');
+  if(m)m.style.display='none';
+}
+
+function doAddWishLib(wishId){
+  var w=state.wishlist.find(function(x){return x.id===wishId;});
+  if(!w)return;
+  var sel=document.getElementById('addlib-lib-select');
+  var floorEl=document.getElementById('addlib-floor');
+  var callEl=document.getElementById('addlib-call');
+  var libId=sel?parseInt(sel.value)||null:null;
+  var floor=floorEl?floorEl.value.trim():'';
+  var callNumber=callEl?callEl.value.trim():'';
+  var lib=libId?(state.libraries||[]).find(function(l){return l.id===libId;}):null;
+  if(!lib&&!callNumber){showToast('図書館または請求記号を入力してください');return;}
+  if(!w.libraries)w.libraries=[];
+  w.libraries.push({libraryId:libId,libraryName:lib?lib.name:'',floor:floor,callNumber:callNumber});
+  save();
+  closeWishAddLib();
+  renderWishlistScreen();
+  showToast('所蔵情報を追加しました');
+}
+
+function closeWishDetail(){
+  var m=document.getElementById('wish-detail-modal');
+  if(m)m.style.display='none';
+}
+
+
+function removeWishLibrary(wishId,libIdx){
+  var w=state.wishlist.find(function(x){return x.id===wishId;});
+  if(!w||!w.libraries)return;
+  w.libraries.splice(libIdx,1);
+  save();
+  renderWishDetailContent(w);
+  showToast('所蔵情報を削除しました');
+}
+
+function openWishEdit(wishId){
+  var w=state.wishlist.find(function(x){return x.id===wishId;});
+  if(!w)return;
+  var modal=document.getElementById('wish-edit-modal');
+  if(!modal){
+    modal=document.createElement('div');
+    modal.id='wish-edit-modal';
+    modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:210;display:flex;align-items:flex-end;justify-content:center';
+    modal.onclick=function(e){if(e.target===modal)closeWishEdit();};
+    document.body.appendChild(modal);
+  }
+  modal.innerHTML='<div style="background:var(--bg2);border-radius:16px 16px 0 0;width:100%;max-width:480px;padding:16px">'
+    +'<div style="font-size:15px;font-weight:700;margin-bottom:12px">書誌情報を編集</div>'
+    +'<div style="display:flex;flex-direction:column;gap:8px">'
+    +'<input type="text" id="wedit-title" value="'+esc(w.title||'')+'" placeholder="タイトル" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2)">'
+    +'<input type="text" id="wedit-author" value="'+esc(w.author||'')+'" placeholder="著者" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2)">'
+    +'<input type="text" id="wedit-publisher" value="'+esc(w.publisher||'')+'" placeholder="出版社" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2)">'
+    +'<input type="text" id="wedit-isbn" value="'+esc(w.isbn||'')+'" placeholder="ISBN" inputmode="numeric" style="font-size:13px;padding:8px;border-radius:var(--r-sm);border:1px solid var(--border2);background:var(--bg2)">'
+    +'<button onclick="saveWishEdit('+wishId+')" style="border:none;background:var(--accent);color:#fff;border-radius:var(--r-sm);padding:10px;font-size:14px;font-family:inherit;cursor:pointer;font-weight:600">保存</button>'
+    +'<button onclick="closeWishEdit()" style="border:none;background:var(--bg3);border-radius:var(--r-sm);padding:10px;font-size:14px;font-family:inherit;cursor:pointer">キャンセル</button>'
+    +'</div></div>';
+  modal.style.display='flex';
+}
+
+function closeWishEdit(){
+  var m=document.getElementById('wish-edit-modal');
+  if(m)m.style.display='none';
+}
+
+function saveWishEdit(wishId){
+  var w=state.wishlist.find(function(x){return x.id===wishId;});
+  if(!w)return;
+  var title=document.getElementById('wedit-title');
+  var author=document.getElementById('wedit-author');
+  var publisher=document.getElementById('wedit-publisher');
+  var isbn=document.getElementById('wedit-isbn');
+  if(title)w.title=title.value.trim();
+  if(author)w.author=author.value.trim();
+  if(publisher)w.publisher=publisher.value.trim();
+  if(isbn)w.isbn=isbn.value.trim().replace(/[-\s]/g,'');
+  save();
+  closeWishEdit();
+  renderWishlistScreen();
+  // 詳細モーダルも更新
+  var detailModal=document.getElementById('wish-detail-modal');
+  if(detailModal&&detailModal.style.display!=='none'){renderWishDetailContent(w);}
+  showToast('書誌情報を更新しました');
+}
 function addCurrentToWishlist(){
   // pendingBook から情報を取得
   if(!pendingBook||!pendingBook.title){showToast('先にISBN検索または手動入力してください');return;}
@@ -1679,6 +1840,11 @@ function findBookById(id){
   var oh=(state.ownHistory||[]).find(function(x){return x.id===id;});if(oh)return oh;
   return null;
 }
+function formatCallNumber(str){
+  if(!str)return '';
+  return str.split(',').map(function(s){return s.trim();}).filter(function(s){return s;}).join(' || ');
+}
+
 function buildNavs(){
   SCREENS.forEach(s=>{
     const nav=document.getElementById('nav-'+s);if(!nav)return;
